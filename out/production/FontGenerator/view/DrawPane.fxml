@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.5" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DrawPaneController">
+   <items>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <VBox layoutX="500.0" maxWidth="-Infinity" prefHeight="398.0" prefWidth="164.0">
+         <children>
+            <Button fx:id="resetButton" mnemonicParsing="false" text="RESET" />
+            <Button fx:id="saveButton" mnemonicParsing="false" text="SAVE" />
+            <Button fx:id="exportButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="EXPORT" textAlignment="CENTER" />
+         </children></VBox>
+   </items>
+</SplitPane>
