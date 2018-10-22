@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.collections.FXCollections;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -7,6 +8,7 @@ import javafx.scene.Cursor;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
@@ -28,11 +30,21 @@ public class DrawPaneController {
     private MainController mainController;
 
     @FXML
+    private Canvas canvas;
+    @FXML
+    public ChoiceBox characterChoice;
+    @FXML
+    public ChoiceBox caseChoice;
+    @FXML
+    private Slider weightSlider;
+    @FXML
     private Button resetButton;
     @FXML
     private Button saveButton;
     @FXML
     private Button exportButton;
+
+    private GraphicsContext gc;
 
 
     /**
@@ -41,30 +53,24 @@ public class DrawPaneController {
      */
     @FXML
     private void initialize() {
-        Slider slider = new Slider(1, 5, 1);
-        slider.setShowTickLabels(true);
-        slider.setShowTickMarks(true);
+        weightSlider.setShowTickLabels(true);
+        weightSlider.setShowTickMarks(true);
+
+        characterChoice.setItems(FXCollections.observableArrayList(
+                "a", "b", "c"
+        ));
+
+        characterChoice.setValue("a");
+
+        caseChoice.setItems(FXCollections.observableArrayList(
+                "uppercase", "lowercase"
+        ));
+
+        caseChoice.setValue("lowercase");
 
         Label line_weight = new Label("Line Weight");
 
-        Button[] basicArr = {resetButton, saveButton, exportButton};
-
-        for(Button btn : basicArr) {
-            btn.setMinWidth(90);
-            btn.setCursor(Cursor.HAND);
-            btn.setTextFill(Color.WHITE);
-            btn.setStyle("-fx-background-color: #80334d;");
-        }
-
-        VBox btns = new VBox(10);
-        btns.getChildren().addAll(line_weight, slider, resetButton, exportButton, saveButton);
-        btns.setPadding(new Insets(5));
-        btns.setStyle("-fx-background-color: #999");
-        btns.setPrefWidth(100);
-
         /* ----------Draw Canvas---------- */
-        Canvas canvas = new Canvas(1080, 790);
-        GraphicsContext gc;
         gc = canvas.getGraphicsContext2D();
         gc.setLineWidth(1);
         gc.setStroke(Color.BLACK);
@@ -85,9 +91,9 @@ public class DrawPaneController {
             gc.closePath();
         });
 
-        // slider
-        slider.valueProperty().addListener(e->{
-            double width = slider.getValue();
+        // weight slider
+        weightSlider.valueProperty().addListener(e->{
+            double width = weightSlider.getValue();
             line_weight.setText(String.format("%.1f", width));
             gc.setLineWidth(width);
         });
@@ -120,18 +126,18 @@ public class DrawPaneController {
     }
 
     public void openChar() {
-//        FileChooser openFile = new FileChooser();
-//        openFile.setTitle("Open File");
-//        File file = openFile.showOpenDialog(primaryStage);
-//        if (file != null) {
-//            try {
-//                InputStream io = new FileInputStream(file);
-//                Image img = new Image(io);
-//                gc.drawImage(img, 0, 0);
-//            } catch (IOException ex) {
-//                System.out.println("Error!");
-//            }
-//        }
+        FileChooser openFile = new FileChooser();
+        openFile.setTitle("Open File");
+        File file = openFile.showOpenDialog(mainController.getPrimaryStage());
+        if (file != null) {
+            try {
+                InputStream io = new FileInputStream(file);
+                Image img = new Image(io);
+                gc.drawImage(img, 0, 0);
+            } catch (IOException ex) {
+                System.out.println("Error!");
+            }
+        }
     };
 
     /**
