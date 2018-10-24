@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
@@ -56,17 +58,39 @@ public class DrawPaneController {
         weightSlider.setShowTickLabels(true);
         weightSlider.setShowTickMarks(true);
 
+        // character select
         characterChoice.setItems(FXCollections.observableArrayList(
                 "a", "b", "c"
         ));
 
         characterChoice.setValue("a");
 
+        characterChoice.getSelectionModel()
+                .selectedIndexProperty()
+                .addListener((observableValue, currentValue, newValue) -> {
+                    /* TODO: on character choice change
+                        - save character data
+                        - clear board
+                        - load new character data
+                     */
+                });
+
+        // case select
         caseChoice.setItems(FXCollections.observableArrayList(
                 "uppercase", "lowercase"
         ));
 
         caseChoice.setValue("lowercase");
+
+        caseChoice.getSelectionModel()
+                .selectedIndexProperty()
+                .addListener((observableValue, currentValue, newValue) -> {
+                    /* TODO: on case choice change
+                        - save character data
+                        - clear board
+                        - load new character data
+                     */
+                });
 
         Label line_weight = new Label("Line Weight");
 

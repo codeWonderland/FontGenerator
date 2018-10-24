@@ -51,6 +51,7 @@
       <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/controller/DrawPaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/DrawPane.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/view/Main.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../javafx-tutorial/src/sample/Paint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../COR-110-28: Concepts of the Self - Fall 2016 (2016FA)/SELF-PORTRAIT PAPER/Self Portrait Paper.docx" beforeDir="false" />
@@ -340,12 +341,7 @@
       <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_agents.py" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_agents.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_test_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_test_classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FontGenerator/controller/DrawPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FontGenerator/controller/DrawPaneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FontGenerator/view/DrawPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FontGenerator/view/DrawPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/DrawPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DrawPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/DrawPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/DrawPane.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -412,12 +408,12 @@
         <counts>
           <entry key="dummy" value="32" />
           <entry key="fxml" value="219" />
-          <entry key="java" value="843" />
+          <entry key="java" value="947" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="843" />
+          <entry key="JAVA" value="947" />
           <entry key="PLAIN_TEXT" value="32" />
           <entry key="XML" value="219" />
         </counts>
@@ -470,8 +466,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/DrawPaneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+            <state relative-caret-position="172">
+              <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1552#1637#0" />
@@ -600,7 +596,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540246619210" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540306387292" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
   </component>
@@ -700,18 +696,17 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1540231485410" duration="7014000" />
       <workItem from="1540244874655" duration="99000" />
-      <workItem from="1540244984759" duration="1375000" />
+      <workItem from="1540244984759" duration="2260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9790000" />
+    <option name="totallyTimeSpent" value="10675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1612" height="1022" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25925925" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25925925" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -720,7 +715,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295964" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32735425" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32735425" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -733,7 +728,7 @@
       <window_info anchor="bottom" id="Event Log" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="15" weight="0.3295964" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="15" visible="true" weight="0.3295964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -791,8 +786,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/DrawPaneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+        <state relative-caret-position="172">
+          <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1552#1637#0" />
