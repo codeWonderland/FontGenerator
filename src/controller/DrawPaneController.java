@@ -1,12 +1,7 @@
 package controller;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
-import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.scene.Cursor;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -14,13 +9,10 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
-import javafx.scene.image.WritableImage;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
+import model.Character;
 
-import javax.imageio.ImageIO;
-import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -34,9 +26,9 @@ public class DrawPaneController {
     @FXML
     private Canvas canvas;
     @FXML
-    public ChoiceBox characterChoice;
+    public ChoiceBox<Character.SYMBOL> characterChoice;
     @FXML
-    public ChoiceBox caseChoice;
+    public ChoiceBox<Character.CASE> caseChoice;
     @FXML
     private Slider weightSlider;
     @FXML
@@ -47,6 +39,8 @@ public class DrawPaneController {
     private Button exportButton;
 
     private GraphicsContext gc;
+
+    private Character currentChar;
 
 
     /**
@@ -60,34 +54,35 @@ public class DrawPaneController {
 
         // character select
         characterChoice.setItems(FXCollections.observableArrayList(
-                "a", "b", "c"
+                Character.SYMBOL.values()
         ));
 
-        characterChoice.setValue("a");
+        characterChoice.setValue(Character.SYMBOL.a);
 
         characterChoice.getSelectionModel()
                 .selectedIndexProperty()
                 .addListener((observableValue, currentValue, newValue) -> {
+                    currentChar.save();
+                    clearChar();
                     /* TODO: on character choice change
-                        - save character data
-                        - clear board
                         - load new character data
                      */
                 });
 
         // case select
         caseChoice.setItems(FXCollections.observableArrayList(
-                "uppercase", "lowercase"
+                model.Character.CASE.values()
         ));
 
-        caseChoice.setValue("lowercase");
+        caseChoice.setValue(Character.CASE.LOWERCASE);
 
         caseChoice.getSelectionModel()
                 .selectedIndexProperty()
                 .addListener((observableValue, currentValue, newValue) -> {
+                    currentChar.save();
+                    clearChar();
+
                     /* TODO: on case choice change
-                        - save character data
-                        - clear board
                         - load new character data
                      */
                 });
@@ -122,30 +117,14 @@ public class DrawPaneController {
             gc.setLineWidth(width);
         });
 
-
-        /*------- Save & Reset ------*/
         // Save
-        saveButton.setOnAction((e)->{
-//            FileChooser savefile = new FileChooser();
-//            savefile.setTitle("Save File");
-//
-//            File file = savefile.showSaveDialog(primaryStage);
-//            if (file != null) {
-//                try {
-//                    WritableImage writableImage = new WritableImage(1080, 790);
-//                    canvas.snapshot(null, writableImage);
-//                    RenderedImage renderedImage = SwingFXUtils.fromFXImage(writableImage, null);
-//                    ImageIO.write(renderedImage, "png", file);
-//                } catch (IOException ex) {
-//                    System.out.println("Error!");
-//                }
-//            }
-
+        saveButton.setOnAction(e -> {
+            currentChar.save();
         });
 
         // Reset
         resetButton.setOnAction((e) -> {
-            gc.clearRect(0,0, 1080, 790);
+            clearChar();
         });
     }
 
@@ -164,12 +143,16 @@ public class DrawPaneController {
         }
     };
 
+    private void clearChar() {
+        gc.clearRect(0,0,1080, 790);
+    }
+
     /**
      * Is called by the main application to give a reference back to itself.
      *
-     * @param main
+     * @param main reference to the main controller
      */
-    public void setMainApp(MainController main) {
+    void setMainApp(MainController main) {
         this.mainController = main;
 
         // Add observable list data to the table
