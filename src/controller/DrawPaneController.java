@@ -62,8 +62,14 @@ public class DrawPaneController {
         characterChoice.getSelectionModel()
                 .selectedIndexProperty()
                 .addListener((observableValue, currentValue, newValue) -> {
-                    currentChar.save();
+                    String fileName = getFile(
+                            caseChoice.getValue(),
+                            Character.SYMBOL.values()[(int) newValue]
+                    );
+
+                    currentChar.save(fileName);
                     clearChar();
+
                     /* TODO: on character choice change
                         - load new character data
                      */
@@ -79,7 +85,12 @@ public class DrawPaneController {
         caseChoice.getSelectionModel()
                 .selectedIndexProperty()
                 .addListener((observableValue, currentValue, newValue) -> {
-                    currentChar.save();
+                    String fileName = getFile(
+                            Character.CASE.values()[(int) newValue],
+                            characterChoice.getValue()
+                    );
+
+                    currentChar.save(fileName);
                     clearChar();
 
                     /* TODO: on case choice change
@@ -95,19 +106,34 @@ public class DrawPaneController {
         gc.setStroke(Color.BLACK);
 
         canvas.setOnMousePressed(e->{
+            double x = e.getX();
+            double y = e.getY();
+
             gc.beginPath();
-            gc.lineTo(e.getX(), e.getY());
+            gc.lineTo(x, y);
+
+            currentChar.openContour(x, y);
         });
 
         canvas.setOnMouseDragged(e->{
-            gc.lineTo(e.getX(), e.getY());
+            double x = e.getX();
+            double y = e.getY();
+
+            gc.lineTo(x, y);
             gc.stroke();
+
+            currentChar.addPoint(x, y);
         });
 
         canvas.setOnMouseReleased(e->{
-            gc.lineTo(e.getX(), e.getY());
+            double x = e.getX();
+            double y = e.getY();
+
+            gc.lineTo(x, y);
             gc.stroke();
             gc.closePath();
+
+            currentChar.closeContour(x, y);
         });
 
         // weight slider
@@ -119,13 +145,20 @@ public class DrawPaneController {
 
         // Save
         saveButton.setOnAction(e -> {
-            currentChar.save();
+            String fileName = getFile(
+                    caseChoice.getValue(),
+                    characterChoice.getValue()
+            );
+
+            currentChar.save(fileName);
         });
 
         // Reset
         resetButton.setOnAction((e) -> {
             clearChar();
         });
+
+        currentChar = new Character(characterChoice.getValue(), caseChoice.getValue());
     }
 
     public void openChar() {
@@ -145,6 +178,10 @@ public class DrawPaneController {
 
     private void clearChar() {
         gc.clearRect(0,0,1080, 790);
+    }
+
+    private String getFile(Character.CASE charChase, Character.SYMBOL symbol) {
+        return "";
     }
 
     /**

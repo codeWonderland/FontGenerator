@@ -18,10 +18,10 @@ public class Character {
     }
 
     public class Coordinate {
-        public final int x;
-        public final int y;
+        public final double x;
+        public final double y;
 
-        public Coordinate(int x, int y) {
+        public Coordinate(double x, double y) {
             this.x = x;
             this.y = y;
         }
@@ -32,23 +32,30 @@ public class Character {
     }
 
     public Character(SYMBOL symbol, CASE charCase) {
+        this.mSymbol = symbol;
+        this.mCase = charCase;
 
+        this.mOutline = new ArrayList<List<Coordinate>>();
     }
 
-    public void save() {
+    public void save(String fileName) {
         // save char
     }
 
-    public void openContour(int x, int y) {
+    public void load(String fileName) {
+
+    }
+
+    public void openContour(double x, double y) {
         mCurrentContour = new ArrayList<Coordinate>();
         this.addPoint(x, y);
     }
 
-    public void addPoint(int x, int y) {
+    public void addPoint(double x, double y) {
         mCurrentContour.add(new Coordinate(x, y));
     }
 
-    public void closeContour(int x, int y) {
+    public void closeContour(double x, double y) {
         addPoint(x, y);
         mOutline.add(mCurrentContour);
     }
@@ -57,7 +64,6 @@ public class Character {
         return mOutline;
     }
 
-    private String mFileLoc;
     private SYMBOL mSymbol;
     private CASE mCase;
     private List<Coordinate> mCurrentContour;
