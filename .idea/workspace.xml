@@ -1,54 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="JavaFXApp" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/android-programming-3e/11_ViewPager/CriminalIntent/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/android-programming-3e/11_ViewPager/CriminalIntent/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/androidTest/java/us/cyosp/codewonderland/champlaintrivia/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/assets/quiz_data.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/java/us/cyosp/codewonderland/champlaintrivia/model/Question.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/java/us/cyosp/codewonderland/champlaintrivia/model/Quiz.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/layout/quiz_selection.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/test/java/us/cyosp/codewonderland/champlaintrivia/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/pa3 - multi-agent search.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../javafx-tutorial/src/sample/Paint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa4 - mpds and reinforcement/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa4 - mpds and reinforcement/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa4 - mpds and reinforcement/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa4 - mpds and reinforcement/.idea/pa4 - mpds and reinforcement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa4 - mpds and reinforcement/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/WelcomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/WelcomePane.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../COR-110-28: Concepts of the Self - Fall 2016 (2016FA)/SELF-PORTRAIT PAPER/Self Portrait Paper.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../COR-115-28: Rhetoric of Self - Fall 2016 (2016FA)/READINGS /submission_text_1.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../COR-115-28: Rhetoric of Self - Fall 2016 (2016FA)/READINGS AND...MINI WRITING ASSIGNMENT #1/submission_text_1.html" beforeDir="false" />
@@ -286,6 +251,33 @@
       <change beforePath="$PROJECT_DIR$/../CSI-300-02: Database Management Systems - Spring 2018 (2018SP)/Submit Problem Set 1/problem set 1.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-300-02: Database Management Systems - Spring 2018 (2018SP)/Submit Problem Set 2/problem_set_2.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-300-02: Database Management Systems - Spring 2018 (2018SP)/Submit Problem Set 3/submission_text_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/android-programming-3e/13_Toolbar/CriminalIntent/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/android-programming-3e/13_Toolbar/CriminalIntent/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/android-programming-3e/13_Toolbar/CriminalIntent/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/android-programming-3e/13_Toolbar/CriminalIntent/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/problem_set_4/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/problem_set_4/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/problem_set_4/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/problem_set_4/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/problem_set_4/app/src/main/java/us/cyosp/codewonderland/problem_set_4/controller/PlanetListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/problem_set_4/app/src/main/java/us/cyosp/codewonderland/problem_set_4/controller/PlanetListFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/assets/quiz_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/assets/quiz_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/java/us/cyosp/codewonderland/champlaintrivia/controller/QuizManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/java/us/cyosp/codewonderland/champlaintrivia/model/Question.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/java/us/cyosp/codewonderland/champlaintrivia/model/Question.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/java/us/cyosp/codewonderland/champlaintrivia/model/Quiz.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/java/us/cyosp/codewonderland/champlaintrivia/model/Quiz.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/java/us/cyosp/codewonderland/champlaintrivia/view/QuizSelection.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/layout/quiz_selection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/layout/quiz_selection.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_1/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/java/us/cyosp/codewonderland/project_2/Lab5ECFinal/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/java/us/cyosp/codewonderland/project_2/controller/ColonyFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/java/us/cyosp/codewonderland/project_2/controller/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/java/us/cyosp/codewonderland/project_2/controller/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/java/us/cyosp/codewonderland/project_2/model/Cell.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/java/us/cyosp/codewonderland/project_2/model/Cell.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/java/us/cyosp/codewonderland/project_2/model/Colony.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/java/us/cyosp/codewonderland/project_2/model/Colony.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/res/layout/fragment_cell.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/res/layout/fragment_colony.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/project_2/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-319-01: Android Development - Fall 2018 (2018FA)/android-programming-3e/07_UIFragments/CriminalIntent/app/app.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-320-01: Global IT &amp; Ethics - Fall 2017 (2017FA)/Annotated bibliography/Ethics of Bug Fixing (1).pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-320-01: Global IT &amp; Ethics - Fall 2017 (2017FA)/Annotated bibliography/Ethics of Bug Fixing.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-320-01: Global IT &amp; Ethics - Fall 2017 (2017FA)/Annotation 1 Review/Global IT &amp; Ethics Annotated Bibliography.docx" beforeDir="false" />
@@ -336,8 +328,15 @@
       <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_agents.py" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_agents.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_test_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_test_classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/pa3 - multi-agent search.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/pa3 - multi-agent search.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FontGenerator/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FontGenerator/controller/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/DrawPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DrawPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/DrawPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/DrawPane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javafx-tutorial/src/sample/Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javafx-tutorial/src/sample/Paint.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -393,25 +392,27 @@
     <session id="1465262271">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="32" />
-          <entry key="fxml" value="219" />
-          <entry key="java" value="2943" />
+          <entry key="fxml" value="232" />
+          <entry key="java" value="3016" />
+          <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2943" />
+          <entry key="JAVA" value="3016" />
           <entry key="PLAIN_TEXT" value="32" />
-          <entry key="XML" value="219" />
+          <entry key="XML" value="245" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -420,14 +421,22 @@
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="XML" value="3" />
+          <entry key="CLASS" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="5" />
+          <entry key="XML" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="3" />
-          <entry key="java" value="2" />
+          <entry key="class" value="1" />
+          <entry key="fxml" value="8" />
+          <entry key="html" value="1" />
+          <entry key="java" value="5" />
+          <entry key="jnlp" value="2" />
+          <entry key="png" value="1" />
+          <entry key="xml" value="9" />
         </counts>
       </usages-collector>
     </session>
@@ -438,57 +447,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/Main.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="38" selection-start-column="38" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/DrawPaneController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="136" selection-start-line="136" selection-end-line="136" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3387#3552#0" />
-                <element signature="e#4381#4441#0" />
-                <element signature="e#4107#4108#0" expanded="true" />
-                <element signature="e#4137#4138#0" expanded="true" />
-                <element signature="e#4189#4190#0" expanded="true" />
-                <element signature="e#4213#4214#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Character.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
-                <element signature="e#878#879#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1092#1093#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -497,10 +460,63 @@
         <entry file="file://$PROJECT_DIR$/src/view/DrawPane.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state relative-caret-position="197">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/assets/tmp_logo.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/DrawPaneController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1785">
+              <caret line="135" selection-start-line="135" selection-end-line="135" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/WelcomePane.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="77" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/WelcomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -528,11 +544,13 @@
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/controller/DrawPane.java" />
         <option value="$PROJECT_DIR$/src/controller/Main.java" />
-        <option value="$PROJECT_DIR$/src/view/Main.fxml" />
-        <option value="$PROJECT_DIR$/src/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/view/DrawPane.fxml" />
-        <option value="$PROJECT_DIR$/src/model/Character.java" />
         <option value="$PROJECT_DIR$/src/controller/DrawPaneController.java" />
+        <option value="$PROJECT_DIR$/src/model/Character.java" />
+        <option value="$PROJECT_DIR$/src/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" />
+        <option value="$PROJECT_DIR$/src/view/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/view/DrawPane.fxml" />
+        <option value="$PROJECT_DIR$/src/view/WelcomePane.fxml" />
       </list>
     </option>
   </component>
@@ -558,6 +576,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -600,7 +619,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -613,8 +631,12 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540587451382" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541336686863" />
     <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CSI-319-01 - Android Development - Fall 2018 (2018FA)/Lab5ECFinal" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RunDashboard">
@@ -629,7 +651,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -679,6 +701,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JavaFXApp.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/JavaFXApp/JavaFXApp.jar" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -699,6 +725,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JAR Application.JavaFXApp.jar" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.JavaFXApp.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -714,17 +749,21 @@
       <workItem from="1540231485410" duration="7014000" />
       <workItem from="1540244874655" duration="99000" />
       <workItem from="1540244984759" duration="3601000" />
-      <workItem from="1540556807578" duration="5773000" />
+      <workItem from="1540556807578" duration="12108000" />
+      <workItem from="1541182456579" duration="1936000" />
+      <workItem from="1541698807889" duration="672000" />
+      <workItem from="1541781535054" duration="613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17789000" />
+    <option name="totallyTimeSpent" value="27345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1613" height="1025" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2137843" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22208041" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -733,8 +772,8 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295964" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.326257" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.326257" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -746,7 +785,7 @@
       <window_info anchor="bottom" id="Event Log" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="15" weight="0.32849163" />
+      <window_info anchor="bottom" id="Terminal" order="15" weight="0.3385475" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -769,18 +808,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/DrawPaneController.java</url>
-          <line>135</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -788,61 +815,190 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/controller/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/sample.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/model/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/JavaFXApp/JavaFXApp.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/JavaFXApp/JavaFXApp.jnlp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6525" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/FontGenerator/controller/MainController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/FontGenerator/view/Main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="43" selection-start-line="43" selection-end-line="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Main.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/DrawPane.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="197">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/view/assets/tmp_logo.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Character.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/WelcomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#878#879#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1092#1093#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/DrawPaneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3387#3552#0" />
-            <element signature="e#4381#4441#0" />
-            <element signature="e#4107#4108#0" expanded="true" />
-            <element signature="e#4137#4138#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4213#4214#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1785">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/WelcomePane.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="77" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>JavaFXApp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>FontGenerator</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

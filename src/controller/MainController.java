@@ -1,15 +1,12 @@
 package controller;
 
-import javafx.fxml.FXML;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import sun.security.tools.keytool.Main;
 
 public class MainController extends Application {
 
