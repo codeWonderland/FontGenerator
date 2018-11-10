@@ -19,7 +19,7 @@ public class UFOManager {
                 "</dict>\n" +
                 "</plist>";
 
-        File metaData = new File(dest +"\\metainfo.plist");
+        File metaData = new File(dest +"/metainfo.plist");
         createFile(contents, metaData);
 
     }
@@ -34,7 +34,7 @@ public class UFOManager {
                 "</array>\n" +
                 "</plist>";
 
-        File layerContents = new File(dest + "\\layercontents.plist");
+        File layerContents = new File(dest + "/layercontents.plist");
         createFile(contents, layerContents);
     }
 
@@ -66,7 +66,7 @@ public class UFOManager {
 
         contents.append("</dict>\n" + "</plist>");
 
-        File contentFile = new File(dest + "\\contents.plist");
+        File contentFile = new File(dest + "/contents.plist");
         createFile(contents.toString(), contentFile);
     }
     private static void createFile(String contents, File newFile) throws IOException {
@@ -85,29 +85,29 @@ public class UFOManager {
 
     public static void createUfo(String destFolder) {
         try {
-            new File(destFolder + "\\ufo").mkdir();
-            new File(destFolder + "\\ufo\\glyphs").mkdir();
-            new File(destFolder + "\\ufo\\images").mkdir();
-            new File(destFolder + "\\ufo\\data").mkdir();
+            System.out.println(destFolder);
+            new File(destFolder + "/glyphs").mkdir();
+            new File(destFolder + "/images").mkdir();
+            new File(destFolder + "/data").mkdir();
         } catch (Exception e) {
             // TODO: Check permissions and results of mkdir()s
             e.printStackTrace();
         }
 
         try {
-            createMetaInfo(destFolder + "\\ufo");
+            createMetaInfo(destFolder);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         try {
-            createLayerContents(destFolder + "\\ufo");
+            createLayerContents(destFolder);
         } catch (IOException e){
             e.printStackTrace();
         }
 
         try {
-            createContents(destFolder + "\\ufo" + "\\glyphs");
+            createContents(destFolder + "/glyphs");
         } catch (IOException e){
             e.printStackTrace();
         }
