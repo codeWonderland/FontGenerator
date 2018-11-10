@@ -188,45 +188,48 @@ public class Character {
 
         // get data from file
         try {
+            //Make sure the file exists first
             File inputFile = new File(fileName);
-
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(inputFile);
-            doc.getDocumentElement().normalize();
-
-            Element eElement;
-            NodeList nList;
-
-            //Go through the points
-            nList = doc.getElementsByTagName("contour");
-
-            //For each contour
-            for (int i = 0; i < nList.getLength(); i++)
+            if(inputFile.exists() && !inputFile.isDirectory())
             {
+                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+                Document doc = dBuilder.parse(inputFile);
+                doc.getDocumentElement().normalize();
 
-                //Get the contour
-                character.openContour(); //Make new contour
-                Node nNode = nList.item(i);
+                Element eElement;
+                NodeList nList;
 
-                if (nNode.getNodeType() == Node.ELEMENT_NODE)
+                //Go through the points
+                nList = doc.getElementsByTagName("contour");
+
+                //For each contour
+                for (int i = 0; i < nList.getLength(); i++)
                 {
 
-                    eElement = (Element) nNode;
-                    //Get list of point elements from the contour
-                    NodeList pointList = eElement.getElementsByTagName("point");
-                    for (int j = 0; j < pointList.getLength(); j++)
+                    //Get the contour
+                    character.openContour(); //Make new contour
+                    Node nNode = nList.item(i);
+
+                    if (nNode.getNodeType() == Node.ELEMENT_NODE)
                     {
-                        Node node = pointList.item(j);
-                        if (node.getNodeType() == node.ELEMENT_NODE) {
-                            Element point = (Element) node;
-                            double x = Double.parseDouble(point.getAttribute("x"));
-                            double y = Double.parseDouble(point.getAttribute("y"));
-                            character.addPoint(x, y);;
+
+                        eElement = (Element) nNode;
+                        //Get list of point elements from the contour
+                        NodeList pointList = eElement.getElementsByTagName("point");
+                        for (int j = 0; j < pointList.getLength(); j++)
+                        {
+                            Node node = pointList.item(j);
+                            if (node.getNodeType() == node.ELEMENT_NODE) {
+                                Element point = (Element) node;
+                                double x = Double.parseDouble(point.getAttribute("x"));
+                                double y = Double.parseDouble(point.getAttribute("y"));
+                                character.addPoint(x, y);;
+                            }
                         }
+                        // End of contour
+                        character.closeContour();
                     }
-                    // End of contour
-                    character.closeContour();
                 }
             }
         } catch (Exception e) {
