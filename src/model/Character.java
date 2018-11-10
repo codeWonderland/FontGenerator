@@ -1,7 +1,21 @@
 package model;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.*;
+
+import java.io.File;
+
 
 public class Character {
     public static enum CASE {
@@ -38,8 +52,135 @@ public class Character {
         this.mOutline = new ArrayList<List<Coordinate>>();
     }
 
-    public void save(String fileName) {
-        // save char
+    public void save(String filePath) {
+        try {
+            //Create DOM document creator
+            DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder  documentBuilder =  documentFactory.newDocumentBuilder();
+            Document document = documentBuilder.newDocument();
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            //Set to indent for more legible output
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            //Create root element
+            Element root =  document.createElement("glyph");
+            document.appendChild(root);
+            //Set the attributes of the root element
+            Attr attr = document.createAttribute("Name");
+            attr.setValue(mSymbol.toString());
+            attr = document.createAttribute("format");
+            attr.setValue("2");
+
+            //Set advance
+            Element advance = document.createElement("advance");
+            root.appendChild(advance);
+            attr = document.createAttribute("width");
+            attr.setValue("268");
+            advance.setAttributeNode(attr);
+
+            //Set unicode
+            Element unicode = document.createElement("unicode");
+            root.appendChild(unicode);
+            attr = document.createAttribute("hex");
+
+            // Create hexcode element
+            String hexcode = mSymbol.toString();
+            char[] ch = hexcode.toCharArray();
+            int test = (int)ch[0];
+
+            //Convert to hexcode depending on the case of the character
+            if(mCase == CASE.UPPERCASE)
+            {
+                attr.setValue(Integer.toHexString(test).toUpperCase());
+                unicode.setAttributeNode(attr);
+            }
+            else
+            {
+                attr.setValue(Integer.toHexString(test));
+                unicode.setAttributeNode(attr);
+            }
+
+
+            //Set guideline
+            Element guideline = document.createElement("guideline");
+            root.appendChild(guideline);
+            attr  = document.createAttribute("y");
+            attr.setValue("-12");
+            guideline.setAttributeNode(attr);
+            attr = document.createAttribute("name");
+            attr.setValue("overshoot");
+            guideline.setAttributeNode(attr);
+
+            //Set Anchor
+            Element anchor = document.createElement("anchor");
+            root.appendChild(anchor);
+            attr = document.createAttribute("x");
+            attr.setValue("74");
+            anchor.setAttributeNode(attr);
+            attr = document.createAttribute("y");
+            attr.setValue("197");
+            anchor.setAttributeNode(attr);
+            attr = document.createAttribute("top");
+            attr.setValue("top");
+            anchor.setAttributeNode(attr);
+
+            //Create outline
+            Element outline = document.createElement("outline");
+            root.appendChild(outline);
+
+            //For each contour
+            Double tmp;
+            for(int i = 0; i < mOutline.size(); i++)
+            {
+                //Create contour
+                Element  contour = document.createElement("contour");
+                outline.appendChild(contour);
+
+                //For each point in the contour
+                for (int j = 0; j <  mOutline.size(); j++)
+                {
+                    //Create points
+                    Element point = document.createElement("point");
+                    contour.appendChild(point);
+                    //Set x coordinate
+                    attr = document.createAttribute("x");
+                    tmp = mOutline.get(i).get(j).x;
+                    attr.setValue(tmp.toString());
+                    point.setAttributeNode(attr);
+
+                    //Set y coordinate
+                    attr = document.createAttribute("y");
+                    tmp = mOutline.get(i).get(j).y;
+                    attr.setValue(tmp.toString());
+                    point.setAttributeNode(attr);
+
+                    //Set point type and smooth
+                    attr = document.createAttribute("type");
+                    attr.setValue("curve");
+                    point.setAttributeNode(attr);
+                    attr = document.createAttribute("smooth");
+                    attr.setValue("yes");
+                    point.setAttributeNode(attr);
+                }
+            }
+
+            //Set the name
+            String fileName = mCase.toString() + "_.glif";
+
+            //Create the XML file
+            DOMSource domSource = new DOMSource(document);
+
+            StreamResult streamResult = new StreamResult(new File(filePath + fileName));
+
+            transformer.transform(domSource,streamResult);
+
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void load(String fileName) {
