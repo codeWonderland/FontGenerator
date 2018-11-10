@@ -12,6 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import model.Character;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -180,8 +181,24 @@ public class DrawPaneController {
         gc.clearRect(0,0,1080, 790);
     }
 
-    private String getFile(Character.CASE charChase, Character.SYMBOL symbol) {
-        return "";
+    /**
+     * gets glyph file location based off of project directory and char info
+     *
+     * @param charCase the current case
+     * @param symbol the current character
+     */
+    @NotNull
+    private String getFile(Character.CASE charCase, Character.SYMBOL symbol) {
+        String fileName;
+
+        if (charCase == Character.CASE.LOWERCASE) {
+            fileName = symbol.name().toLowerCase() + "_.glif";
+
+        } else {
+            fileName = symbol.name().toUpperCase() + "_.glif";
+        }
+
+        return mainController.getProjectDir() + fileName;
     }
 
     /**
