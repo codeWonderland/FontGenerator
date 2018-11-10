@@ -18,6 +18,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DrawPaneController {
 
@@ -159,23 +161,45 @@ public class DrawPaneController {
             clearChar();
         });
 
-        currentChar = new Character(characterChoice.getValue(), caseChoice.getValue());
+        currentChar = Character.load(
+                getFile(
+                        caseChoice.getValue(),
+                        characterChoice.getValue()
+                ),
+                characterChoice.getValue(),
+                caseChoice.getValue()
+        );
+
+        paintChar();
     }
 
-    public void openChar() {
-        FileChooser openFile = new FileChooser();
-        openFile.setTitle("Open File");
-        File file = openFile.showOpenDialog(mainController.getPrimaryStage());
-        if (file != null) {
-            try {
-                InputStream io = new FileInputStream(file);
-                Image img = new Image(io);
-                gc.drawImage(img, 0, 0);
-            } catch (IOException ex) {
-                System.out.println("Error!");
+    private void paintChar() {
+        int index = 0;
+
+        for (List<Character.Coordinate> contour : currentChar.getOutline()) {
+            for (Character.Coordinate coordinate: contour) {
+                if (index == 0) {
+                    gc.beginPath();
+                    gc.lineTo(coordinate.x, coordinate.y);
+
+                    index++;
+
+                } else if (index == contour.size() - 1) {
+                    gc.lineTo(coordinate.x, coordinate.y);
+                    gc.stroke();
+                    gc.closePath();
+
+                    index = 0;
+
+                } else {
+                    gc.lineTo(coordinate.x, coordinate.y);
+                    gc.stroke();
+
+                    index++;
+                }
             }
         }
-    };
+    }
 
     private void clearChar() {
         gc.clearRect(0,0,1080, 790);
