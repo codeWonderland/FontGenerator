@@ -40,6 +40,7 @@ public class WelcomeController {
 
         loadProject.setOnAction(e -> {
             DirectoryChooser dc = new DirectoryChooser();
+            dc.setInitialDirectory(new File(System.getProperty("user.home")));
             File file = dc.showDialog(null);
 
             if (file != null) {

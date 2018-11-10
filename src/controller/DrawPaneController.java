@@ -73,9 +73,16 @@ public class DrawPaneController {
                     currentChar.save(fileName);
                     clearChar();
 
-                    /* TODO: on character choice change
-                        - load new character data
-                     */
+                    currentChar = Character.load(
+                            getFile(
+                                    caseChoice.getValue(),
+                                    characterChoice.getValue()
+                            ),
+                            characterChoice.getValue(),
+                            caseChoice.getValue()
+                    );
+
+                    paintChar();
                 });
 
         // case select
@@ -96,9 +103,16 @@ public class DrawPaneController {
                     currentChar.save(fileName);
                     clearChar();
 
-                    /* TODO: on case choice change
-                        - load new character data
-                     */
+                    currentChar = Character.load(
+                            getFile(
+                                    caseChoice.getValue(),
+                                    characterChoice.getValue()
+                            ),
+                            characterChoice.getValue(),
+                            caseChoice.getValue()
+                    );
+
+                    paintChar();
                 });
 
         Label line_weight = new Label("Line Weight");
@@ -160,7 +174,9 @@ public class DrawPaneController {
         resetButton.setOnAction((e) -> {
             clearChar();
         });
+    }
 
+    void start() {
         currentChar = Character.load(
                 getFile(
                         caseChoice.getValue(),
@@ -213,16 +229,18 @@ public class DrawPaneController {
      */
     @NotNull
     private String getFile(Character.CASE charCase, Character.SYMBOL symbol) {
-        String fileName;
+        String filePath = mainController.getProjectDir();
 
         if (charCase == Character.CASE.LOWERCASE) {
-            fileName = symbol.name().toLowerCase() + "_.glif";
+            filePath += symbol.name().toLowerCase() + "_.glif";
 
         } else {
-            fileName = symbol.name().toUpperCase() + "_.glif";
+            filePath += symbol.name().toUpperCase() + "_.glif";
         }
 
-        return mainController.getProjectDir() + fileName;
+        System.out.println(filePath);
+
+        return filePath;
     }
 
     /**

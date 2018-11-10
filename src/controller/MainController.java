@@ -83,6 +83,8 @@ public class MainController extends Application {
             DrawPaneController controller = loader.getController();
             controller.setMainApp(this);
 
+            controller.start();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -98,6 +100,7 @@ public class MainController extends Application {
 
     void setProjectDir(String path) {
         projectDir = path;
+
         showDrawPane();
     }
 
