@@ -183,8 +183,18 @@ public class Character {
         }
     }
 
-    public void load(String fileName) {
+    public Character load(String fileName) {
+        // get data from filename
 
+        //symbol = ???;
+        //case = ???;
+
+        //Character character = new Character(symbol, case)
+
+        // use openContour(), addPoint(), and closeContour()
+        // to update the character with the loaded points
+
+        return null;
     }
 
     public void openContour(double x, double y) {
