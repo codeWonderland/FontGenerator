@@ -187,6 +187,49 @@ public class Character {
         Character character = new Character(symbol, charCase);
 
         // get data from file
+        try {
+            File inputFile = new File("fileName");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(inputFile);
+            doc.getDocumentElement().normalize();
+
+            Element eElement;
+            NodeList nList;
+
+            //Go through the points
+            nList = doc.getElementsByTagName("contour");
+
+            //For each contour
+            for (int i = 0; i < nList.getLength(); i++)
+            {
+
+                //Get the contour
+                openContour(); //Make new contour
+                Node nNode = nList.item(i);
+
+                if (nNode.getNodeType() == Node.ELEMENT_NODE)
+                {
+
+                    eElement = (Element) nNode;
+                    //Get list of point elements from the contour
+                    NodeList pointList = eElement.getElementsByTagName("point");
+                    for (int j = 0; j < pointList.getLength(); j++)
+                    {
+                        Node node = pointList.item(j);
+                        if (node.getNodeType() == node.ELEMENT_NODE) {
+                            Element point = (Element) node;
+                            double x = Double.parseDouble(point.getAttribute("x"));
+                            double y = Double.parseDouble(point.getAttribute("y"));
+                            addPoint(x, y);;
+                        }
+                    }
+                    closeContour();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         // use openContour(), addPoint(), and closeContour()
         // to update the character with the loaded points
@@ -199,12 +242,22 @@ public class Character {
         this.addPoint(x, y);
     }
 
+    public void openContour()
+    {
+        mCurrentContour = new ArrayList<Coordinate>();
+    }
+
     public void addPoint(double x, double y) {
         mCurrentContour.add(new Coordinate(x, y));
     }
 
     public void closeContour(double x, double y) {
         addPoint(x, y);
+        mOutline.add(mCurrentContour);
+    }
+
+    public void closeContour()
+    {
         mOutline.add(mCurrentContour);
     }
 
