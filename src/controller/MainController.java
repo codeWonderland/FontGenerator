@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -12,6 +13,7 @@ public class MainController extends Application {
 
     private BorderPane rootLayout;
     private Stage primaryStage;
+    private String projectDir;
 
     @Override
     public void start(Stage primaryStage) {
@@ -20,7 +22,7 @@ public class MainController extends Application {
 
         initRootLayout();
 
-        showDrawPane();
+        showWelcomePane();
     }
 
     /**
@@ -37,6 +39,28 @@ public class MainController extends Application {
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Shows the person overview inside the root layout.
+     */
+    private void showWelcomePane() {
+        try {
+            // Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainController.class.getResource("../view/WelcomePane.fxml"));
+            AnchorPane welcome = (AnchorPane) loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(welcome);
+
+            // Give the controller access to the main app.
+            WelcomeController controller = loader.getController();
+            controller.setMainApp(this);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -68,8 +92,17 @@ public class MainController extends Application {
      * Returns the main stage.
      * @return
      */
-    public Stage getPrimaryStage() {
+    Stage getPrimaryStage() {
         return primaryStage;
+    }
+
+    void setProjectDir(String path) {
+        projectDir = path;
+        showDrawPane();
+    }
+
+    String getProjectDir() {
+        return projectDir;
     }
 
     public static void main(String[] args) {

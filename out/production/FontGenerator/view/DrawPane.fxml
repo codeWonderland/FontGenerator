@@ -11,57 +11,58 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.5" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DrawPaneController">
-   <items>
-       <Canvas fx:id="canvas" height="400.0" layoutX="80.0" layoutY="53.0" width="434.0" />
-       <VBox layoutX="500.0" maxWidth="-Infinity" prefHeight="398.0" prefWidth="164.0">
-            <Label text="Character">
-               <VBox.margin>
-                  <Insets left="5.0" right="5.0" top="5.0" />
-               </VBox.margin>
-            </Label>
-            <ChoiceBox fx:id="characterChoice"
-                       prefWidth="150.0">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" />
-               </VBox.margin>
-            </ChoiceBox>
-            <Label text="Case">
-               <VBox.margin>
-                  <Insets left="5.0" right="5.0" top="5.0" />
-               </VBox.margin>
-            </Label>
-            <ChoiceBox fx:id="caseChoice"
-                       prefWidth="150.0">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" />
-               </VBox.margin>
-            </ChoiceBox>
-            <Label text="Line Weight">
-               <VBox.margin>
-                  <Insets left="5.0" top="5.0" />
-               </VBox.margin>
-            </Label>
-            <Slider fx:id="weightSlider" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="1" showTickMarks="true" value="1.0">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" />
-               </VBox.margin>
-            </Slider>
-              <Button fx:id="resetButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="RESET">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </VBox.margin>
-            </Button>
-              <Button fx:id="saveButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="SAVE">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </VBox.margin>
-            </Button>
-              <Button fx:id="exportButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="EXPORT" textAlignment="CENTER">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </VBox.margin>
-            </Button>
-          </VBox>
-   </items>
+<SplitPane dividerPositions="0.5" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DrawPaneController">
+    <Canvas fx:id="canvas" height="400.0" layoutX="80.0" layoutY="53.0" width="434.0"/>
+    <VBox layoutX="500.0" maxWidth="-Infinity" prefHeight="398.0" prefWidth="164.0">
+        <Label text="Character">
+            <VBox.margin>
+                <Insets left="5.0" right="5.0" top="5.0"/>
+            </VBox.margin>
+        </Label>
+        <ChoiceBox fx:id="characterChoice"
+                   prefWidth="150.0">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0"/>
+            </VBox.margin>
+        </ChoiceBox>
+        <Label text="Case">
+            <VBox.margin>
+                <Insets left="5.0" right="5.0" top="5.0"/>
+            </VBox.margin>
+        </Label>
+        <ChoiceBox fx:id="caseChoice"
+                   prefWidth="150.0">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0"/>
+            </VBox.margin>
+        </ChoiceBox>
+        <Label text="Line Weight">
+            <VBox.margin>
+                <Insets left="5.0" top="5.0"/>
+            </VBox.margin>
+        </Label>
+        <Slider fx:id="weightSlider" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="1"
+                showTickMarks="true" value="1.0">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0"/>
+            </VBox.margin>
+        </Slider>
+        <Button fx:id="resetButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="RESET">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </VBox.margin>
+        </Button>
+        <Button fx:id="saveButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="SAVE">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </VBox.margin>
+        </Button>
+        <Button fx:id="exportButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308"
+                mnemonicParsing="false" text="EXPORT" textAlignment="CENTER">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </VBox.margin>
+        </Button>
+    </VBox>
 </SplitPane>

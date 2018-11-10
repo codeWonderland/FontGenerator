@@ -191,8 +191,5 @@ public class DrawPaneController {
      */
     void setMainApp(MainController main) {
         this.mainController = main;
-
-        // Add observable list data to the table
-        // personTable.setItems(mainApp.getPersonData());
     }
 }
