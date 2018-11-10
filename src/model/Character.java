@@ -183,12 +183,13 @@ public class Character {
         }
     }
 
-    public Character load(String fileName, SYMBOL symbol, CASE charCase) {
+    public static Character load(String fileName, SYMBOL symbol, CASE charCase) {
         Character character = new Character(symbol, charCase);
 
         // get data from file
         try {
-            File inputFile = new File("fileName");
+            File inputFile = new File(fileName);
+
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(inputFile);
@@ -205,7 +206,7 @@ public class Character {
             {
 
                 //Get the contour
-                openContour(); //Make new contour
+                character.openContour(); //Make new contour
                 Node nNode = nList.item(i);
 
                 if (nNode.getNodeType() == Node.ELEMENT_NODE)
@@ -221,10 +222,11 @@ public class Character {
                             Element point = (Element) node;
                             double x = Double.parseDouble(point.getAttribute("x"));
                             double y = Double.parseDouble(point.getAttribute("y"));
-                            addPoint(x, y);;
+                            character.addPoint(x, y);;
                         }
                     }
-                    closeContour();
+                    // End of contour
+                    character.closeContour();
                 }
             }
         } catch (Exception e) {
