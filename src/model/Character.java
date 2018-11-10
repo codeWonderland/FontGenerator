@@ -85,21 +85,21 @@ public class Character {
             attr = document.createAttribute("hex");
 
             // Create hexcode element
-            String hexcode = mSymbol.toString();
-            char[] ch = hexcode.toCharArray();
-            int test = (int)ch[0];
-
-            //Convert to hexcode depending on the case of the character
+            String hexcode;
             if(mCase == CASE.UPPERCASE)
             {
-                attr.setValue(Integer.toHexString(test).toUpperCase());
-                unicode.setAttributeNode(attr);
+               hexcode = mSymbol.toString().toUpperCase();
             }
             else
             {
-                attr.setValue(Integer.toHexString(test));
-                unicode.setAttributeNode(attr);
+                hexcode = mSymbol.toString();
             }
+
+            char[] ch = hexcode.toCharArray();
+            int test = (int)ch[0];
+
+            attr.setValue("00" + Integer.toHexString(test));
+            unicode.setAttributeNode(attr);
 
 
             //Set guideline
