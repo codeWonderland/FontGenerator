@@ -1,7 +1,6 @@
 package util;
 
 import model.Character;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;

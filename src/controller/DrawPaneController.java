@@ -13,7 +13,10 @@ import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import model.Character;
 import org.jetbrains.annotations.NotNull;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -74,17 +77,27 @@ public class DrawPaneController {
                             charSymbolOld
                     );
 
-                    currentChar.save(fileName);
+                    try {
+                        currentChar.save(fileName);
+
+                    } catch (ParserConfigurationException | TransformerException e) {
+                        e.printStackTrace();
+                    }
                     clearChar();
 
-                    currentChar = Character.load(
-                            getFile(
-                                    charCase,
-                                    charSymbolNew
-                            ),
-                            charSymbolNew,
-                            charCase
-                    );
+                    try {
+                        currentChar = Character.load(
+                                getFile(
+                                        charCase,
+                                        charSymbolNew
+                                ),
+                                charSymbolNew,
+                                charCase
+                        );
+
+                    } catch (ParserConfigurationException | SAXException | IOException e) {
+                        e.printStackTrace();
+                    }
 
                     paintChar();
                 });
@@ -108,17 +121,27 @@ public class DrawPaneController {
                             charSymbol
                     );
 
-                    currentChar.save(fileName);
+                    try {
+                        currentChar.save(fileName);
+
+                    } catch (ParserConfigurationException | TransformerException e) {
+                        e.printStackTrace();
+                    }
                     clearChar();
 
-                    currentChar = Character.load(
-                            getFile(
-                                    charCaseNew,
-                                    charSymbol
-                            ),
-                            charSymbol,
-                            charCaseNew
-                    );
+                    try {
+                        currentChar = Character.load(
+                                getFile(
+                                        charCaseNew,
+                                        charSymbol
+                                ),
+                                charSymbol,
+                                charCaseNew
+                        );
+
+                    } catch (ParserConfigurationException | IOException | SAXException e) {
+                        e.printStackTrace();
+                    }
 
                     paintChar();
                 });
@@ -175,7 +198,12 @@ public class DrawPaneController {
                     characterChoice.getValue()
             );
 
-            currentChar.save(fileName);
+            try {
+                currentChar.save(fileName);
+
+            } catch (ParserConfigurationException | TransformerException e1) {
+                e1.printStackTrace();
+            }
         });
 
         // Reset
@@ -185,14 +213,19 @@ public class DrawPaneController {
     }
 
     void start() {
-        currentChar = Character.load(
-                getFile(
-                        caseChoice.getValue(),
-                        characterChoice.getValue()
-                ),
-                characterChoice.getValue(),
-                caseChoice.getValue()
-        );
+        try {
+            currentChar = Character.load(
+                    getFile(
+                            caseChoice.getValue(),
+                            characterChoice.getValue()
+                    ),
+                    characterChoice.getValue(),
+                    caseChoice.getValue()
+            );
+
+        } catch (ParserConfigurationException | IOException | SAXException e) {
+            e.printStackTrace();
+        }
 
         paintChar();
     }

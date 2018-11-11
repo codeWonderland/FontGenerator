@@ -3,10 +3,7 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.FileChooser;
 import util.UFOManager;
-
-import java.awt.*;
 import java.io.File;
 
 public class WelcomeController {
@@ -33,8 +30,6 @@ public class WelcomeController {
 
                 UFOManager.createUfo(path);
                 mainController.setProjectDir(path);
-            } else {
-                // TODO: determine what to do upon fc cancel
             }
         });
 
@@ -47,8 +42,6 @@ public class WelcomeController {
                 String path = file.getAbsolutePath();
 
                 mainController.setProjectDir(path);
-            } else {
-                // TODO: determine what to do upon fc cancel
             }
         });
     }
