@@ -6,9 +6,7 @@ import java.util.List;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
@@ -41,6 +39,8 @@ public class Character {
         }
     }
 
+    
+
     public Character() {
 
     }
@@ -52,131 +52,156 @@ public class Character {
         this.mOutline = new ArrayList<List<Coordinate>>();
     }
 
-    public void save(String filePath) {
+    public void save(String fileName) {
         try {
             //Create DOM document creator
             DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder  documentBuilder =  documentFactory.newDocumentBuilder();
             Document document = documentBuilder.newDocument();
-            TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer();
-            //Set to indent for more legible output
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
             //Create root element
             Element root =  document.createElement("glyph");
-            document.appendChild(root);
-            //Set the attributes of the root element
-            Attr attr = document.createAttribute("Name");
+
+            //create root attribute
+            Attr attr = document.createAttribute("name");
             attr.setValue(mSymbol.toString());
+            root.setAttributeNode(attr);
+
             attr = document.createAttribute("format");
             attr.setValue("2");
+            root.setAttributeNode(attr);
 
-            //Set advance
+            //create advance element
             Element advance = document.createElement("advance");
-            root.appendChild(advance);
+
+            // set width attribute
             attr = document.createAttribute("width");
             attr.setValue("268");
             advance.setAttributeNode(attr);
 
-            //Set unicode
+            // append advance to root
+            root.appendChild(advance);
+
+            //create unicode element
             Element unicode = document.createElement("unicode");
-            root.appendChild(unicode);
-            attr = document.createAttribute("hex");
 
             // Create hexcode element
-            String hexcode;
-            if(mCase == CASE.UPPERCASE)
-            {
-               hexcode = mSymbol.toString().toUpperCase();
-            }
-            else
-            {
-                hexcode = mSymbol.toString();
+            String charCode;
+
+            if(mCase == CASE.UPPERCASE) {
+               charCode = mSymbol.toString().toUpperCase();
+
+            } else {
+                charCode = mSymbol.toString().toLowerCase();
             }
 
-            char[] ch = hexcode.toCharArray();
-            int test = (int)ch[0];
+            int charCodeInt = (int)charCode.charAt(0);
 
-            attr.setValue("00" + Integer.toHexString(test));
+
+            attr = document.createAttribute("hex");
+
+            attr.setValue("00" + Integer.toHexString(charCodeInt));
             unicode.setAttributeNode(attr);
+
+            root.appendChild(unicode);
 
 
             //Set guideline
             Element guideline = document.createElement("guideline");
-            root.appendChild(guideline);
+
             attr  = document.createAttribute("y");
             attr.setValue("-12");
             guideline.setAttributeNode(attr);
+
             attr = document.createAttribute("name");
             attr.setValue("overshoot");
             guideline.setAttributeNode(attr);
 
+            root.appendChild(guideline);
+
             //Set Anchor
             Element anchor = document.createElement("anchor");
-            root.appendChild(anchor);
+
             attr = document.createAttribute("x");
             attr.setValue("74");
             anchor.setAttributeNode(attr);
+
             attr = document.createAttribute("y");
             attr.setValue("197");
             anchor.setAttributeNode(attr);
+
             attr = document.createAttribute("top");
             attr.setValue("top");
             anchor.setAttributeNode(attr);
 
-            //Create outline
-            Element outline = document.createElement("outline");
-            root.appendChild(outline);
+            root.appendChild(anchor);
 
-            //For each contour
-            Double tmp;
-            for(int i = 0; i < mOutline.size(); i++)
+            // create outline
+            Element outline = document.createElement("outline");
+
+            // for contour in outline
+            for(int contourIndex = 0; contourIndex < mOutline.size(); contourIndex++)
             {
-                //Create contour
+                //Create contour element
                 Element  contour = document.createElement("contour");
-                outline.appendChild(contour);
 
                 //For each point in the contour
-                for (int j = 0; j <  mOutline.size(); j++)
+                for (int pointIndex = 0; pointIndex <  mOutline.get(contourIndex).size(); pointIndex++)
                 {
                     //Create points
                     Element point = document.createElement("point");
-                    contour.appendChild(point);
+
                     //Set x coordinate
                     attr = document.createAttribute("x");
-                    tmp = mOutline.get(i).get(j).x;
-                    attr.setValue(tmp.toString());
+                    attr.setValue(Double.toString(
+                            mOutline.get(contourIndex).get(pointIndex).x
+                    ));
                     point.setAttributeNode(attr);
 
                     //Set y coordinate
                     attr = document.createAttribute("y");
-                    tmp = mOutline.get(i).get(j).y;
-                    attr.setValue(tmp.toString());
+                    attr.setValue(Double.toString(
+                            mOutline.get(contourIndex).get(pointIndex).y
+                    ));
                     point.setAttributeNode(attr);
 
                     //Set point type and smooth
                     attr = document.createAttribute("type");
                     attr.setValue("curve");
                     point.setAttributeNode(attr);
+
                     attr = document.createAttribute("smooth");
                     attr.setValue("yes");
                     point.setAttributeNode(attr);
+
+                    // append point to contour
+                    contour.appendChild(point);
                 }
+
+                // append contour to outline
+                outline.appendChild(contour);
             }
 
-            //Set the name
-            String fileName = mCase.toString() + "_.glif";
+            // appent outline to root
+            root.appendChild(outline);
 
-            //Create the XML file
-            DOMSource domSource = new DOMSource(document);
+            // append root to document
+            document.appendChild(root);
 
-            StreamResult streamResult = new StreamResult(new File(filePath + fileName));
+            // create transformer
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
 
-            transformer.transform(domSource,streamResult);
+            //Set to indent for more legible output
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
+            // create output stream to file
+            Result output = new StreamResult(new File(fileName));
 
+            // create input source
+            Source input = new DOMSource(document);
 
+            // transform document to file
+            transformer.transform(input, output);
 
         } catch (Exception e) {
             e.printStackTrace();

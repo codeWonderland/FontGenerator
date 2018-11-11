@@ -65,9 +65,13 @@ public class DrawPaneController {
         characterChoice.getSelectionModel()
                 .selectedIndexProperty()
                 .addListener((observableValue, currentValue, newValue) -> {
+                    Character.CASE charCase = caseChoice.getValue();
+                    Character.SYMBOL charSymbolOld = characterChoice.getValue();
+                    Character.SYMBOL charSymbolNew = Character.SYMBOL.values()[(int) newValue];
+
                     String fileName = getFile(
-                            caseChoice.getValue(),
-                            Character.SYMBOL.values()[(int) newValue]
+                            charCase,
+                            charSymbolOld
                     );
 
                     currentChar.save(fileName);
@@ -75,11 +79,11 @@ public class DrawPaneController {
 
                     currentChar = Character.load(
                             getFile(
-                                    caseChoice.getValue(),
-                                    characterChoice.getValue()
+                                    charCase,
+                                    charSymbolNew
                             ),
-                            characterChoice.getValue(),
-                            caseChoice.getValue()
+                            charSymbolNew,
+                            charCase
                     );
 
                     paintChar();
@@ -95,9 +99,13 @@ public class DrawPaneController {
         caseChoice.getSelectionModel()
                 .selectedIndexProperty()
                 .addListener((observableValue, currentValue, newValue) -> {
+                    Character.CASE charCaseOld = caseChoice.getValue();
+                    Character.CASE charCaseNew = Character.CASE.values()[(int) newValue];
+                    Character.SYMBOL charSymbol = characterChoice.getValue();
+
                     String fileName = getFile(
-                            Character.CASE.values()[(int) newValue],
-                            characterChoice.getValue()
+                            charCaseOld,
+                            charSymbol
                     );
 
                     currentChar.save(fileName);
@@ -105,11 +113,11 @@ public class DrawPaneController {
 
                     currentChar = Character.load(
                             getFile(
-                                    caseChoice.getValue(),
-                                    characterChoice.getValue()
+                                    charCaseNew,
+                                    charSymbol
                             ),
-                            characterChoice.getValue(),
-                            caseChoice.getValue()
+                            charSymbol,
+                            charCaseNew
                     );
 
                     paintChar();
@@ -192,6 +200,8 @@ public class DrawPaneController {
     private void paintChar() {
         int index = 0;
 
+        resetButton.getOnMouseClicked();
+
         for (List<Character.Coordinate> contour : currentChar.getOutline()) {
             for (Character.Coordinate coordinate: contour) {
                 if (index == 0) {
@@ -229,7 +239,7 @@ public class DrawPaneController {
      */
     @NotNull
     private String getFile(Character.CASE charCase, Character.SYMBOL symbol) {
-        String filePath = mainController.getProjectDir();
+        String filePath = mainController.getProjectDir() + "/glyphs/";
 
         if (charCase == Character.CASE.LOWERCASE) {
             filePath += symbol.name().toLowerCase() + "_.glif";
@@ -237,8 +247,6 @@ public class DrawPaneController {
         } else {
             filePath += symbol.name().toUpperCase() + "_.glif";
         }
-
-        System.out.println(filePath);
 
         return filePath;
     }
