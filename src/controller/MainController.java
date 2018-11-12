@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.File;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import util.UFOManager;
 
 public class MainController extends Application {
 
@@ -99,7 +101,7 @@ public class MainController extends Application {
     }
 
     void setProjectDir(String path) {
-        projectDir = path;
+        projectDir = UFOManager.formatUfoDir(path);
 
         showDrawPane();
     }

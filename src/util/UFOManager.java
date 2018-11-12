@@ -38,8 +38,26 @@ public class UFOManager {
         }
     }
 
-    public static void exportUfo(String ufoLoc) {
+    public static void exportUfo(String destFolder) {
 
+    }
+
+    public static String formatUfoDir(String destFolder) {
+        File ufoDir = new File(destFolder);
+
+        if (!ufoDir.isDirectory()) {
+            System.out.println("No project at designated path, " + destFolder);
+            return null;
+
+        } else if (!destFolder.endsWith(".ufo")) {
+            File newDir = new File(ufoDir.getParent() + "/" + ufoDir + ".ufo");
+            ufoDir.renameTo(newDir);
+
+            return newDir.getAbsolutePath();
+
+        } else {
+            return destFolder;
+        }
     }
 
     private static void createMetaInfo(String dest) throws IOException {
