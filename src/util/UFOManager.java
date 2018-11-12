@@ -30,11 +30,11 @@ public class UFOManager {
 
     }
 
-    /*
-    Takes in a destination folder for a ufo project,
-    makes sure it is a valid folder path, and also
-    ensures that it ends in .ufo
-     */
+    /**
+     * Takes in a destination folder for a ufo project,
+     * makes sure it is a valid folder path, and also
+     * ensures that it ends in .ufo
+     * */
     public static String formatUfoDir(String destFolder) {
         File ufoDir = new File(destFolder);
 
@@ -47,14 +47,15 @@ public class UFOManager {
             // if the destination folder does not end in .ufo then we fix that
             File newDir = new File(ufoDir.getParent() + "/" + ufoDir + ".ufo");
 
-            if (newDir.renameTo(ufoDir)) {
-                return newDir.getAbsolutePath();
+            if (ufoDir.renameTo(newDir)) {
+                // TODO: Determine why renaming isn't working
+                return ufoDir.getAbsolutePath();
             }
 
         }
 
         // if nothing needs to be done we just return the dest folder
-        return destFolder;
+        return ufoDir.getAbsolutePath();
     }
 
     private static void createMetaInfo(String dest) {

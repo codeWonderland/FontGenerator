@@ -329,6 +329,7 @@
       <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_agents.py" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_agents.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_test_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa2 - search/search_test_classes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/pa3 - multi-agent search.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CSI-480-01: Advanced Topics: AI - Fall 2018 (2018FA)/pa3 - multi-agent search/.idea/pa3 - multi-agent search.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/UFOManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/UFOManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../javafx-tutorial/src/sample/Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javafx-tutorial/src/sample/Paint.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -399,13 +400,13 @@
         <counts>
           <entry key="dummy" value="35" />
           <entry key="fxml" value="290" />
-          <entry key="java" value="7713" />
+          <entry key="java" value="8248" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7713" />
+          <entry key="JAVA" value="8248" />
           <entry key="PLAIN_TEXT" value="35" />
           <entry key="XML" value="303" />
         </counts>
@@ -460,11 +461,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="653">
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -484,14 +485,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/util/UFOManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+            <state relative-caret-position="221">
+              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createUfo#0;class#UFOManager#0" />
+                <element signature="method#exportUfo#0;class#UFOManager#0" />
+                <element signature="method#createMetaInfo#0;class#UFOManager#0" />
                 <element signature="method#createLayerContents#0;class#UFOManager#0" />
                 <element signature="method#createContents#0;class#UFOManager#0" />
                 <element signature="method#createFile#0;class#UFOManager#0" />
@@ -503,8 +506,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/WelcomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="120">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -577,6 +583,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>instance_ufo</find>
+    </findStrings>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -600,8 +611,8 @@
         <option value="$PROJECT_DIR$/src/controller/WelcomeController.java" />
         <option value="$PROJECT_DIR$/src/controller/DrawPaneController.java" />
         <option value="$PROJECT_DIR$/src/model/Character.java" />
-        <option value="$PROJECT_DIR$/src/util/UFOManager.java" />
         <option value="$PROJECT_DIR$/src/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/util/UFOManager.java" />
       </list>
     </option>
   </component>
@@ -691,7 +702,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542055482595" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542061778321" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -816,15 +827,16 @@
       <workItem from="1541872008915" duration="49000" />
       <workItem from="1541876286692" duration="6511000" />
       <workItem from="1541907668037" duration="2676000" />
-      <workItem from="1541910472202" duration="4551000" />
+      <workItem from="1541910472202" duration="6603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44979000" />
+    <option name="totallyTimeSpent" value="47031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1613" height="1025" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.23165284" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -836,7 +848,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32849163" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.326257" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -848,7 +860,7 @@
       <window_info anchor="bottom" id="Event Log" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="15" visible="true" weight="0.3385475" />
+      <window_info anchor="bottom" id="Terminal" order="15" weight="0.3385475" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -914,6 +926,12 @@
           <line>233</line>
           <properties />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/util/UFOManager.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1019,13 +1037,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/WelcomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/DrawPaneController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-312">
@@ -1050,26 +1061,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/UFOManager.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/WelcomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createUfo#0;class#UFOManager#0" />
-            <element signature="method#createLayerContents#0;class#UFOManager#0" />
-            <element signature="method#createContents#0;class#UFOManager#0" />
-            <element signature="method#createFile#0;class#UFOManager#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="653">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/UFOManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createUfo#0;class#UFOManager#0" />
+            <element signature="method#exportUfo#0;class#UFOManager#0" />
+            <element signature="method#createMetaInfo#0;class#UFOManager#0" />
+            <element signature="method#createLayerContents#0;class#UFOManager#0" />
+            <element signature="method#createContents#0;class#UFOManager#0" />
+            <element signature="method#createFile#0;class#UFOManager#0" />
           </folding>
         </state>
       </provider>
