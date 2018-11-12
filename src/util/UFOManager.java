@@ -8,11 +8,45 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class UFOManager {
+    public static void createUfo(String destFolder) {
+        try {
+            System.out.println(destFolder);
+            new File(destFolder + "/glyphs").mkdir();
+            new File(destFolder + "/images").mkdir();
+            new File(destFolder + "/data").mkdir();
+        } catch (Exception e) {
+            // TODO: Check permissions and results of mkdir()s
+            e.printStackTrace();
+        }
+
+        try {
+            createMetaInfo(destFolder);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            createLayerContents(destFolder);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        try {
+            createContents(destFolder + "/glyphs");
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void exportUfo(String ufoLoc) {
+
+    }
+
     private static void createMetaInfo(String dest) throws IOException {
         String contents = "<plist version=\"1.0\">\n " +
                 "<dict>\n" +
                 "   <key>creator</key>\n"+
-                "   <string>Font Generator</sting>\n" +
+                "   <string>Font Generator</string>\n" +
                 "   <key>formatVersion</key>\n" +
                 "   <integer>3</integer>\n" +
                 "</dict>\n" +
@@ -68,6 +102,7 @@ public class UFOManager {
         File contentFile = new File(dest + "/contents.plist");
         createFile(contents.toString(), contentFile);
     }
+
     private static void createFile(String contents, File newFile) throws IOException {
         String header = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                 "<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\"\n" +
@@ -80,36 +115,6 @@ public class UFOManager {
         }
         else
             throw new IOException();
-    }
-
-    public static void createUfo(String destFolder) {
-        try {
-            System.out.println(destFolder);
-            new File(destFolder + "/glyphs").mkdir();
-            new File(destFolder + "/images").mkdir();
-            new File(destFolder + "/data").mkdir();
-        } catch (Exception e) {
-            // TODO: Check permissions and results of mkdir()s
-            e.printStackTrace();
-        }
-
-        try {
-            createMetaInfo(destFolder);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            createLayerContents(destFolder);
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-
-        try {
-            createContents(destFolder + "/glyphs");
-        } catch (IOException e){
-            e.printStackTrace();
-        }
     }
 }
 
