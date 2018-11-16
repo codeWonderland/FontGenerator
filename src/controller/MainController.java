@@ -34,7 +34,7 @@ public class MainController extends Application {
         try {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainController.class.getResource("../view/Main.fxml"));
+            loader.setLocation(MainController.class.getResource("/view/Main.fxml"));
             rootLayout = loader.load();
 
             // Show the scene containing the root layout.
@@ -53,7 +53,7 @@ public class MainController extends Application {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainController.class.getResource("../view/WelcomePane.fxml"));
+            loader.setLocation(MainController.class.getResource("/view/WelcomePane.fxml"));
             AnchorPane welcome = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
@@ -75,7 +75,7 @@ public class MainController extends Application {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainController.class.getResource("../view/DrawPane.fxml"));
+            loader.setLocation(MainController.class.getResource("/view/DrawPane.fxml"));
             SplitPane personOverview = (SplitPane) loader.load();
 
             // Set person overview into the center of root layout.

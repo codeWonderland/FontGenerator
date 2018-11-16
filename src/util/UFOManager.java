@@ -5,7 +5,11 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import static java.nio.file.StandardCopyOption.*;
 
 public class UFOManager {
     public static void createUfo(String destFolder) {
@@ -45,12 +49,18 @@ public class UFOManager {
 
         } else if (!destFolder.endsWith(".ufo")) {
             // if the destination folder does not end in .ufo then we fix that
-            File newDir = new File(ufoDir.getParent() + "/" + ufoDir + ".ufo");
+            Path source = Paths.get(ufoDir.getAbsolutePath());
+            Path dest = Paths.get(ufoDir.getAbsolutePath() + ".ufo");
 
-            if (ufoDir.renameTo(newDir)) {
-                // TODO: Determine why renaming isn't working
-                return ufoDir.getAbsolutePath();
+            try {
+                // move files to new location with .ufo appended
+                Files.move(source, dest, REPLACE_EXISTING);
+
+            } catch (IOException e) {
+                System.err.println("Issue appending .ufo to project folder");
             }
+
+            return ufoDir.getAbsolutePath() + ".ufo";
 
         }
 

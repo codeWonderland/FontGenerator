@@ -3,7 +3,7 @@
 <script>
     function launchApplication(jnlpfile) {
         dtjava.launch(            {
-                url : 'JavaFXApp.jnlp'
+                url : 'FontGenerator.jnlp'
             },
             {
                 javafx : '8.0+'
@@ -15,11 +15,11 @@
 </script>
 
 <script>
-    function javafxEmbedJavaFXApp_id() {
+    function javafxEmbedFontGenerator_id() {
         dtjava.embed(
             {
-                id : 'JavaFXApp_id',
-                url : 'JavaFXApp.jnlp',
+                id : 'FontGenerator_id',
+                url : 'FontGenerator.jnlp',
                 placeholder : 'javafx-app-placeholder',
                 width : '600',
                 height : '400'
@@ -31,12 +31,12 @@
         );
     }
     <!-- Embed FX application into web page once page is loaded -->
-    dtjava.addOnloadCallback(javafxEmbedJavaFXApp_id);
+    dtjava.addOnloadCallback(javafxEmbedFontGenerator_id);
 </script>
 
 </head><body>
-<h2>Test page for <b>JavaFXApp</b></h2>
-  <b>Webstart:</b> <a href='JavaFXApp.jnlp' onclick="return launchApplication('JavaFXApp.jnlp');">click to launch this app as webstart</a><br><hr><br>
+<h2>Test page for <b>FontGenerator</b></h2>
+  <b>Webstart:</b> <a href='FontGenerator.jnlp' onclick="return launchApplication('FontGenerator.jnlp');">click to launch this app as webstart</a><br><hr><br>
 
   <!-- Applet will be inserted here -->
   <div id='javafx-app-placeholder'></div>
