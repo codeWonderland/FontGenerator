@@ -21,12 +21,13 @@ public class UFOManager {
             System.err.println("Issue creating /images folder");
         }
 
-        if (new File(destFolder + "/data").mkdir()) {
+        if (!new File(destFolder + "/data").mkdir()) {
             System.err.println("Issue creating /data folder");
         }
 
         createMetaInfo(destFolder);
         createLayerContents(destFolder);
+        createFontInfo(destFolder);
         createContents(destFolder + "/glyphs");
     }
 
@@ -66,6 +67,19 @@ public class UFOManager {
 
         // if nothing needs to be done we just return the dest folder
         return ufoDir.getAbsolutePath();
+    }
+
+    private static void createFontInfo(String dest) {
+        String contents = "<plist version=\"1.0\">\n" +
+                "   <dict>\n" +
+                "       <key>unitsPerEm</key>\n" +
+                "       <integer>4096</integer>\n" +
+                "   </dict>\n" +
+                "</plist>";
+
+        File fontInfo = new File(dest + "/fontinfo.plist");
+
+        createFile(contents, fontInfo);
     }
 
     private static void createMetaInfo(String dest) {
