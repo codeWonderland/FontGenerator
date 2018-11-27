@@ -12,7 +12,6 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import model.Character;
-import org.jetbrains.annotations.NotNull;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -270,7 +269,6 @@ public class DrawPaneController {
      * @param charCase the current case
      * @param symbol the current character
      */
-    @NotNull
     private String getFile(Character.CASE charCase, Character.SYMBOL symbol) {
         String filePath = mainController.getProjectDir() + "/glyphs/";
 
