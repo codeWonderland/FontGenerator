@@ -3,14 +3,14 @@
     <key>unitsPerEm</key>
     <integer>4096</integer>
     <key>ascender</key>
-    <integer>4096</integer>
+    <integer>256</integer>
     <key>descender</key>
-    <integer>4096</integer>
+    <integer>256</integer>
     <key>familyName</key>
     <string>TestUfo</string>
     <key>xHeight</key>
-    <integer>2048</integer>
+    <integer>128</integer>
     <key>capHeight</key>
-    <integer>4096</integer>
+    <integer>256</integer>
   </dict>
 </plist>

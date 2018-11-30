@@ -2,7 +2,13 @@
 Simple font creation application
 
 ## Dependencies
-This project requires Java 8 to be installed, the recommended version can be downloaded [here](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html).
+This project requires at least Java 8 to be installed, the recommended version can be downloaded [here](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html).
+
+The rest of the dependencies can be installed via pip
+
+```$bash
+$ pip install fontmake pyclipper==1.0.6
+```
 
 ## Installation
 Download the latest jar file from our [releases page](https://github.com/codeWonderland/FontGenerator/releases).
