@@ -51,6 +51,11 @@ public class Character {
         this.mOutline = new ArrayList<List<Coordinate>>();
     }
 
+    public void clear() {
+        this.mOutline = new ArrayList<List<Coordinate>>();
+        this.mCurrentContour = null;
+    }
+
     public void save(String fileName) throws ParserConfigurationException, TransformerException {
 
         //Create DOM document creator

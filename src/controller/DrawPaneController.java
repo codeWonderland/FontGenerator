@@ -150,6 +150,7 @@ public class DrawPaneController {
         // Reset
         resetButton.setOnAction((e) -> {
             clearChar();
+            currentChar.clear();
         });
 
 

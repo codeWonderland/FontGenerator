@@ -6,61 +6,61 @@
 <anchor top="top" x="74" y="197"/>
 <outline>
 <contour>
-<point smooth="yes" type="curve" x="267.0" y="62.0"/>
-<point smooth="yes" type="curve" x="267.0" y="66.0"/>
+<point type="move" x="267.0" y="62.0"/>
+<point x="267.0" y="66.0"/>
 <point smooth="yes" type="curve" x="266.0" y="81.0"/>
-<point smooth="yes" type="curve" x="265.0" y="93.0"/>
+<point x="265.0" y="93.0"/>
 <point smooth="yes" type="curve" x="264.0" y="107.0"/>
-<point smooth="yes" type="curve" x="263.0" y="117.0"/>
+<point x="263.0" y="117.0"/>
 <point smooth="yes" type="curve" x="262.0" y="130.0"/>
-<point smooth="yes" type="curve" x="261.0" y="144.0"/>
+<point x="261.0" y="144.0"/>
 <point smooth="yes" type="curve" x="260.0" y="157.0"/>
-<point smooth="yes" type="curve" x="259.0" y="170.0"/>
+<point x="259.0" y="170.0"/>
 <point smooth="yes" type="curve" x="258.0" y="181.0"/>
-<point smooth="yes" type="curve" x="258.0" y="184.0"/>
+<point x="258.0" y="184.0"/>
 <point smooth="yes" type="curve" x="258.0" y="196.0"/>
-<point smooth="yes" type="curve" x="258.0" y="200.0"/>
+<point x="258.0" y="200.0"/>
 <point smooth="yes" type="curve" x="258.0" y="210.0"/>
-<point smooth="yes" type="curve" x="258.0" y="210.0"/>
+<point x="258.0" y="210.0"/>
 </contour>
 <contour>
-<point smooth="yes" type="curve" x="138.0" y="70.0"/>
-<point smooth="yes" type="curve" x="137.0" y="81.0"/>
+<point type="move" x="138.0" y="70.0"/>
+<point x="137.0" y="81.0"/>
 <point smooth="yes" type="curve" x="136.0" y="93.0"/>
-<point smooth="yes" type="curve" x="135.0" y="109.0"/>
+<point x="135.0" y="109.0"/>
 <point smooth="yes" type="curve" x="134.0" y="125.0"/>
-<point smooth="yes" type="curve" x="133.0" y="142.0"/>
+<point x="133.0" y="142.0"/>
 <point smooth="yes" type="curve" x="132.0" y="159.0"/>
-<point smooth="yes" type="curve" x="131.0" y="176.0"/>
+<point x="131.0" y="176.0"/>
 <point smooth="yes" type="curve" x="130.0" y="187.0"/>
-<point smooth="yes" type="curve" x="129.0" y="202.0"/>
+<point x="129.0" y="202.0"/>
 <point smooth="yes" type="curve" x="128.0" y="217.0"/>
-<point smooth="yes" type="curve" x="127.0" y="229.0"/>
+<point x="127.0" y="229.0"/>
 <point smooth="yes" type="curve" x="126.0" y="232.0"/>
-<point smooth="yes" type="curve" x="125.0" y="245.0"/>
+<point x="125.0" y="245.0"/>
 <point smooth="yes" type="curve" x="125.0" y="249.0"/>
-<point smooth="yes" type="curve" x="124.0" y="260.0"/>
+<point x="124.0" y="260.0"/>
 <point smooth="yes" type="curve" x="123.0" y="262.0"/>
-<point smooth="yes" type="curve" x="123.0" y="265.0"/>
+<point x="123.0" y="265.0"/>
 <point smooth="yes" type="curve" x="123.0" y="268.0"/>
-<point smooth="yes" type="curve" x="123.0" y="269.0"/>
+<point x="123.0" y="269.0"/>
 <point smooth="yes" type="curve" x="123.0" y="269.0"/>
 </contour>
 <contour>
-<point smooth="yes" type="curve" x="107.0" y="159.0"/>
-<point smooth="yes" type="curve" x="121.0" y="159.0"/>
+<point type="move" x="107.0" y="159.0"/>
+<point x="121.0" y="159.0"/>
 <point smooth="yes" type="curve" x="138.0" y="159.0"/>
-<point smooth="yes" type="curve" x="166.0" y="159.0"/>
+<point x="166.0" y="159.0"/>
 <point smooth="yes" type="curve" x="194.0" y="159.0"/>
-<point smooth="yes" type="curve" x="229.0" y="159.0"/>
+<point x="229.0" y="159.0"/>
 <point smooth="yes" type="curve" x="273.0" y="154.0"/>
-<point smooth="yes" type="curve" x="297.0" y="152.0"/>
+<point x="297.0" y="152.0"/>
 <point smooth="yes" type="curve" x="316.0" y="151.0"/>
-<point smooth="yes" type="curve" x="332.0" y="150.0"/>
+<point x="332.0" y="150.0"/>
 <point smooth="yes" type="curve" x="356.0" y="149.0"/>
-<point smooth="yes" type="curve" x="360.0" y="149.0"/>
+<point x="360.0" y="149.0"/>
 <point smooth="yes" type="curve" x="380.0" y="149.0"/>
-<point smooth="yes" type="curve" x="386.0" y="149.0"/>
+<point x="386.0" y="149.0"/>
 <point smooth="yes" type="curve" x="386.0" y="149.0"/>
 </contour>
 </outline>
