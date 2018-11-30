@@ -169,21 +169,9 @@ public class Character {
                 ));
                 pointElement.setAttributeNode(attr);
 
-                if (i == 0) {
-                    attr = document.createAttribute("type");
-                    attr.setValue("move");
-                    pointElement.setAttributeNode(attr);
-
-                } else if (i % 2 == 0) {
-                    //Set point type and smooth
-                    attr = document.createAttribute("type");
-                    attr.setValue("curve");
-                    pointElement.setAttributeNode(attr);
-
-                    attr = document.createAttribute("smooth");
-                    attr.setValue("yes");
-                    pointElement.setAttributeNode(attr);
-                }
+                attr = document.createAttribute("type");
+                attr.setValue("line");
+                pointElement.setAttributeNode(attr);
 
                 // append point to contour
                 contourElement.appendChild(pointElement);
