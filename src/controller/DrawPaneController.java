@@ -11,6 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
@@ -133,25 +135,10 @@ public class DrawPaneController {
         });
 
         // Save
-        saveButton.setOnAction(e -> {
-            String fileName = getFile(
-                    caseChoice.getValue(),
-                    characterChoice.getValue()
-            );
-
-            try {
-                currentChar.save(fileName);
-
-            } catch (ParserConfigurationException | TransformerException e1) {
-                e1.printStackTrace();
-            }
-        });
+        saveButton.setOnAction(e -> saveChar());
 
         // Reset
-        resetButton.setOnAction((e) -> {
-            clearChar();
-            currentChar.clear();
-        });
+        resetButton.setOnAction((e) -> resetChar());
 
 
     }
@@ -199,6 +186,16 @@ public class DrawPaneController {
 
                         default:
                             break;
+                    }
+
+                    final KeyCombination reset = new KeyCodeCombination(KeyCode.R, KeyCombination.CONTROL_DOWN);
+                    final KeyCombination save = new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN);
+
+                    if (reset.match(keyEvent)) {
+                        resetChar();
+
+                    } else if (save.match(keyEvent)) {
+                        saveChar();
                     }
 
                     // Prevent event bubbling
@@ -325,6 +322,25 @@ public class DrawPaneController {
         }
 
         paintChar();
+    }
+
+    private void resetChar() {
+        clearChar();
+        currentChar.clear();
+    }
+
+    private void saveChar() {
+        String fileName = getFile(
+                caseChoice.getValue(),
+                characterChoice.getValue()
+        );
+
+        try {
+            currentChar.save(fileName);
+
+        } catch (ParserConfigurationException | TransformerException e) {
+            e.printStackTrace();
+        }
     }
 
     private void clearChar() {
