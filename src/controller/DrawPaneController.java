@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.collections.FXCollections;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -9,8 +10,11 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import model.Character;
 import org.xml.sax.SAXException;
 
@@ -67,38 +71,7 @@ public class DrawPaneController {
         characterChoice.getSelectionModel()
                 .selectedIndexProperty()
                 .addListener((observableValue, currentValue, newValue) -> {
-                    Character.CASE charCase = caseChoice.getValue();
-                    Character.SYMBOL charSymbolOld = characterChoice.getValue();
-                    Character.SYMBOL charSymbolNew = Character.SYMBOL.values()[(int) newValue];
-
-                    String fileName = getFile(
-                            charCase,
-                            charSymbolOld
-                    );
-
-                    try {
-                        currentChar.save(fileName);
-
-                    } catch (ParserConfigurationException | TransformerException e) {
-                        e.printStackTrace();
-                    }
-                    clearChar();
-
-                    try {
-                        currentChar = Character.load(
-                                getFile(
-                                        charCase,
-                                        charSymbolNew
-                                ),
-                                charSymbolNew,
-                                charCase
-                        );
-
-                    } catch (ParserConfigurationException | SAXException | IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    paintChar();
+                    setChar(newValue);
                 });
 
         // case select
@@ -111,38 +84,7 @@ public class DrawPaneController {
         caseChoice.getSelectionModel()
                 .selectedIndexProperty()
                 .addListener((observableValue, currentValue, newValue) -> {
-                    Character.CASE charCaseOld = caseChoice.getValue();
-                    Character.CASE charCaseNew = Character.CASE.values()[(int) newValue];
-                    Character.SYMBOL charSymbol = characterChoice.getValue();
-
-                    String fileName = getFile(
-                            charCaseOld,
-                            charSymbol
-                    );
-
-                    try {
-                        currentChar.save(fileName);
-
-                    } catch (ParserConfigurationException | TransformerException e) {
-                        e.printStackTrace();
-                    }
-                    clearChar();
-
-                    try {
-                        currentChar = Character.load(
-                                getFile(
-                                        charCaseNew,
-                                        charSymbol
-                                ),
-                                charSymbol,
-                                charCaseNew
-                        );
-
-                    } catch (ParserConfigurationException | IOException | SAXException e) {
-                        e.printStackTrace();
-                    }
-
-                    paintChar();
+                    setCase(Character.CASE.values()[(int) newValue]);
                 });
 
         Label line_weight = new Label("Line Weight");
@@ -209,6 +151,8 @@ public class DrawPaneController {
         resetButton.setOnAction((e) -> {
             clearChar();
         });
+
+
     }
 
     void start() {
@@ -227,6 +171,38 @@ public class DrawPaneController {
         }
 
         paintChar();
+
+        // Keybindings
+        mainController.getPrimaryStage()
+                .getScene()
+                .setOnKeyPressed(keyEvent -> {
+
+                    switch (keyEvent.getCode()) {
+                        case RIGHT:
+                            nextSymbol();
+                            break;
+
+                        case LEFT:
+                            prevSymbol();
+                            break;
+
+                        case UP:
+                            setCase(Character.CASE.UPPERCASE);
+                            caseChoice.setValue(Character.CASE.UPPERCASE);
+                            break;
+
+                        case DOWN:
+                            setCase(Character.CASE.LOWERCASE);
+                            caseChoice.setValue(Character.CASE.LOWERCASE);
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    // Prevent event bubbling
+                    keyEvent.consume();
+                });
     }
 
     private void paintChar() {
@@ -257,6 +233,97 @@ public class DrawPaneController {
                 }
             }
         }
+    }
+
+    private void prevSymbol() {
+        String currentSymbol = characterChoice.getValue().toString();
+        int currentIndex = Character.SYMBOL.valueOf(currentSymbol).ordinal();
+
+        int newIndex = currentIndex - 1;
+
+        setChar(newIndex);
+
+        characterChoice.setValue(Character.SYMBOL.values()[newIndex]);
+    }
+
+    private void nextSymbol() {
+        String currentSymbol = characterChoice.getValue().toString();
+        int currentIndex = Character.SYMBOL.valueOf(currentSymbol).ordinal();
+
+        int newIndex = currentIndex + 1;
+
+        setChar(newIndex);
+
+        characterChoice.setValue(Character.SYMBOL.values()[newIndex]);
+    }
+
+    private void setChar(java.lang.Number charIndex) {
+        Character.CASE charCase = caseChoice.getValue();
+        Character.SYMBOL charSymbolOld = characterChoice.getValue();
+        Character.SYMBOL charSymbolNew = Character.SYMBOL.values()[(int) charIndex];
+
+        String fileName = getFile(
+                charCase,
+                charSymbolOld
+        );
+
+        try {
+            currentChar.save(fileName);
+
+        } catch (ParserConfigurationException | TransformerException e) {
+            e.printStackTrace();
+        }
+        clearChar();
+
+        try {
+            currentChar = Character.load(
+                    getFile(
+                            charCase,
+                            charSymbolNew
+                    ),
+                    charSymbolNew,
+                    charCase
+            );
+
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            e.printStackTrace();
+        }
+
+        paintChar();
+    }
+
+    private void setCase(Character.CASE charCaseNew) {
+        Character.CASE charCaseOld = caseChoice.getValue();
+        Character.SYMBOL charSymbol = characterChoice.getValue();
+
+        String fileName = getFile(
+                charCaseOld,
+                charSymbol
+        );
+
+        try {
+            currentChar.save(fileName);
+
+        } catch (ParserConfigurationException | TransformerException e) {
+            e.printStackTrace();
+        }
+        clearChar();
+
+        try {
+            currentChar = Character.load(
+                    getFile(
+                            charCaseNew,
+                            charSymbol
+                    ),
+                    charSymbol,
+                    charCaseNew
+            );
+
+        } catch (ParserConfigurationException | IOException | SAXException e) {
+            e.printStackTrace();
+        }
+
+        paintChar();
     }
 
     private void clearChar() {

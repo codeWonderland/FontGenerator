@@ -143,6 +143,8 @@ public class Character {
             //Create contour element
             Element contourElement = document.createElement("contour");
 
+            int i = 0;
+
             //For each point in the contour
             for (Coordinate point : contour) {
                 //Create points
@@ -162,17 +164,26 @@ public class Character {
                 ));
                 pointElement.setAttributeNode(attr);
 
-                //Set point type and smooth
-                attr = document.createAttribute("type");
-                attr.setValue("curve");
-                pointElement.setAttributeNode(attr);
+                if (i == 0) {
+                    attr = document.createAttribute("type");
+                    attr.setValue("move");
+                    pointElement.setAttributeNode(attr);
 
-                attr = document.createAttribute("smooth");
-                attr.setValue("yes");
-                pointElement.setAttributeNode(attr);
+                } else if (i % 2 == 0) {
+                    //Set point type and smooth
+                    attr = document.createAttribute("type");
+                    attr.setValue("curve");
+                    pointElement.setAttributeNode(attr);
+
+                    attr = document.createAttribute("smooth");
+                    attr.setValue("yes");
+                    pointElement.setAttributeNode(attr);
+                }
 
                 // append point to contour
                 contourElement.appendChild(pointElement);
+
+                i++;
             }
 
             // append contour to outline
