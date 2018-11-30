@@ -69,15 +69,33 @@ public class UFOManager {
         return ufoDir.getAbsolutePath();
     }
 
-    private static void createFontInfo(String dest) {
+    private static void createFontInfo(String destFolder) {
+        String[] tmp = destFolder.split("/");
+
+        String family = tmp[tmp.length - 1];
+
+        tmp = family.split(".ufo");
+
+        family = tmp[0];
+
         String contents = "<plist version=\"1.0\">\n" +
                 "   <dict>\n" +
                 "       <key>unitsPerEm</key>\n" +
                 "       <integer>4096</integer>\n" +
+                "       <key>ascender</key>\n" +
+                "       <integer>4096</integer>\n" +
+                "       <key>descender</key>\n" +
+                "       <integer>4096</integer>\n" +
+                "       <key>familyName</key>\n" +
+                "       <string>" + family + "</string>\n" +
+                "       <key>xHeight</key>\n" +
+                "       <integer>2048</integer>\n" +
+                "       <key>capHeight</key>\n" +
+                "       <integer>4096</integer>\n" +
                 "   </dict>\n" +
                 "</plist>";
 
-        File fontInfo = new File(dest + "/fontinfo.plist");
+        File fontInfo = new File(destFolder + "/fontinfo.plist");
 
         createFile(contents, fontInfo);
     }
