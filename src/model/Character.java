@@ -138,8 +138,17 @@ public class Character {
                 ));
                 pointElement.setAttributeNode(attr);
 
+                //Set type
                 attr = document.createAttribute("type");
-                attr.setValue("line");
+
+                if (i == 0) {
+                    attr.setValue("move");
+
+                } else {
+                    attr.setValue("line");
+                }
+
+
                 pointElement.setAttributeNode(attr);
 
                 // append point to contour
