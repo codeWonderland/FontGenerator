@@ -19,14 +19,6 @@ public class UFOManager {
             System.err.println("Issue creating /glyphs folder");
         }
 
-        if (!new File(destFolder + "/images").mkdir()) {
-            System.err.println("Issue creating /images folder");
-        }
-
-        if (!new File(destFolder + "/data").mkdir()) {
-            System.err.println("Issue creating /data folder");
-        }
-
         createMetaInfo(destFolder);
         createLayerContents(destFolder);
         createFontInfo(destFolder);
