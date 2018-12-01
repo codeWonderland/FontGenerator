@@ -1,11 +1,11 @@
 <plist version="1.0">
   <dict>
     <key>unitsPerEm</key>
-    <integer>4096</integer>
+    <integer>256</integer>
     <key>ascender</key>
     <integer>256</integer>
     <key>descender</key>
-    <integer>256</integer>
+    <integer>-256</integer>
     <key>familyName</key>
     <string>TestUfo</string>
     <key>xHeight</key>

@@ -2,8 +2,6 @@
 <glyph format="2" name="l">
 <advance width="268"/>
 <unicode hex="006c"/>
-<guideline name="overshoot" y="-12"/>
-<anchor top="top" x="74" y="197"/>
 <outline>
 <contour>
 <point type="line" x="210.0" y="67.0"/>

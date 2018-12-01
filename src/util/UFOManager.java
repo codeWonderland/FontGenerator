@@ -100,17 +100,17 @@ public class UFOManager {
         String contents = "<plist version=\"1.0\">\n" +
                 "   <dict>\n" +
                 "       <key>unitsPerEm</key>\n" +
-                "       <integer>4096</integer>\n" +
+                "       <integer>256</integer>\n" +
                 "       <key>ascender</key>\n" +
-                "       <integer>4096</integer>\n" +
+                "       <integer>256</integer>\n" +
                 "       <key>descender</key>\n" +
-                "       <integer>4096</integer>\n" +
+                "       <integer>-256</integer>\n" +
                 "       <key>familyName</key>\n" +
                 "       <string>" + family + "</string>\n" +
                 "       <key>xHeight</key>\n" +
-                "       <integer>2048</integer>\n" +
+                "       <integer>128</integer>\n" +
                 "       <key>capHeight</key>\n" +
-                "       <integer>4096</integer>\n" +
+                "       <integer>256</integer>\n" +
                 "   </dict>\n" +
                 "</plist>";
 

@@ -109,37 +109,6 @@ public class Character {
 
         root.appendChild(unicode);
 
-
-        //Set guideline
-        Element guideline = document.createElement("guideline");
-
-        attr  = document.createAttribute("y");
-        attr.setValue("-12");
-        guideline.setAttributeNode(attr);
-
-        attr = document.createAttribute("name");
-        attr.setValue("overshoot");
-        guideline.setAttributeNode(attr);
-
-        root.appendChild(guideline);
-
-        //Set Anchor
-        Element anchor = document.createElement("anchor");
-
-        attr = document.createAttribute("x");
-        attr.setValue("74");
-        anchor.setAttributeNode(attr);
-
-        attr = document.createAttribute("y");
-        attr.setValue("197");
-        anchor.setAttributeNode(attr);
-
-        attr = document.createAttribute("top");
-        attr.setValue("top");
-        anchor.setAttributeNode(attr);
-
-        root.appendChild(anchor);
-
         // create outline
         Element outline = document.createElement("outline");
 
