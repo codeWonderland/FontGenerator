@@ -83,6 +83,11 @@ public class Character {
         attr.setValue("268");
         advance.setAttributeNode(attr);
 
+        // set height attribute
+        attr = document.createAttribute("height");
+        attr.setValue("268");
+        advance.setAttributeNode(attr);
+
         // append advance to root
         root.appendChild(advance);
 
@@ -134,7 +139,7 @@ public class Character {
                 //Set y coordinate
                 attr = document.createAttribute("y");
                 attr.setValue(Double.toString(
-                        point.y
+                        350 - point.y
                 ));
                 pointElement.setAttributeNode(attr);
 
@@ -232,7 +237,7 @@ public class Character {
                             double y = Double.parseDouble(pointElement.getAttribute("y"));
 
                             // add point to character
-                            character.addPoint(x, y);
+                            character.addPoint(x, 350 - y);
                         }
                     }
 
