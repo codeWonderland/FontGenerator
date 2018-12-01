@@ -1,14 +1,16 @@
 package util;
 
 import model.Character;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.concurrent.Executors;
+import java.util.function.Consumer;
+
 import static java.nio.file.StandardCopyOption.*;
 
 public class UFOManager {
@@ -32,7 +34,24 @@ public class UFOManager {
     }
 
     public static void exportUfo(String destFolder) {
+        try {
+            boolean isWindows = System.getProperty("os.name")
+                    .toLowerCase().startsWith("windows");
 
+            String command = String.format("fontmake -u %s", destFolder);
+
+            if (isWindows) {
+                command = String.format("cmd /C %s", command);
+            } else {
+                command = String.format("sh -c %s", command);
+            }
+
+            Runtime r = Runtime.getRuntime();
+            Process p = r.exec(command);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

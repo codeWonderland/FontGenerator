@@ -19,6 +19,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.Character;
 import org.xml.sax.SAXException;
+import util.UFOManager;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -138,9 +139,7 @@ public class DrawPaneController {
         saveButton.setOnAction(e -> saveChar());
 
         // Reset
-        resetButton.setOnAction((e) -> resetChar());
-
-
+        resetButton.setOnAction(e -> resetChar());
     }
 
     void start() {
@@ -201,6 +200,9 @@ public class DrawPaneController {
                     // Prevent event bubbling
                     keyEvent.consume();
                 });
+
+        // export
+        exportButton.setOnAction(e -> UFOManager.exportUfo(mainController.getProjectDir()));
     }
 
     private void paintChar() {
