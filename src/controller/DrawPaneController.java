@@ -232,6 +232,10 @@ public class DrawPaneController {
 
         int newIndex = currentIndex - 1;
 
+        if (newIndex < 0) {
+            newIndex = Character.SYMBOL.values().length - 1;
+        }
+
         setChar(newIndex);
 
         characterChoice.setValue(Character.SYMBOL.values()[newIndex]);
@@ -242,6 +246,10 @@ public class DrawPaneController {
         int currentIndex = Character.SYMBOL.valueOf(currentSymbol).ordinal();
 
         int newIndex = currentIndex + 1;
+
+        if (newIndex == Character.SYMBOL.values().length) {
+            newIndex = 0;
+        }
 
         setChar(newIndex);
 
