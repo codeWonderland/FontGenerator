@@ -146,12 +146,14 @@ public class Character {
                 //Set type
                 attr = document.createAttribute("type");
 
-                if (i == 0) {
-                    attr.setValue("move");
+//                if (i == 0) {
+//                    attr.setValue("move");
+//
+//                } else {
+//                    attr.setValue("line");
+//                }
 
-                } else {
-                    attr.setValue("line");
-                }
+                attr.setValue("line");
 
 
                 pointElement.setAttributeNode(attr);

@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.function.Consumer;
@@ -142,33 +144,32 @@ public class UFOManager {
     }
 
     private static void createContents(String dest) {
-        ArrayList<String> alphabet = new ArrayList<>();
-        String letter;
-
-        for (Character.SYMBOL s : Character.SYMBOL.values()) {
-            letter = s.toString();
-
-            alphabet.add(
-                    String.format("%s_lower", letter)
-            );
-            alphabet.add(
-                    String.format("%s_upper", letter)
-            );
-        }
-
+        Character.SYMBOL[] alphabet = Character.SYMBOL.values();
+        String letter = "";
 
         StringBuilder contents = new StringBuilder(
                 "<plist version=\"1.0\">\n" +
                 "<dict>\n"
         );
 
-        for (String character : alphabet)
+        for (Character.SYMBOL character : alphabet) {
+            letter = character.toString().toLowerCase();
+
             contents.append("   <key>")
-                    .append(character)
+                    .append(letter)
                     .append("</key>\n")
                     .append("   <string>")
-                    .append(character)
-                    .append(".glif</string>\n");
+                    .append(letter)
+                    .append("_lower.glif</string>\n");
+
+            contents.append("   <key>")
+                    .append(letter.toUpperCase())
+                    .append("</key>\n")
+                    .append("   <string>")
+                    .append(letter)
+                    .append("_upper.glif</string>\n");
+
+        }
 
 
         contents.append("</dict>\n" + "</plist>");

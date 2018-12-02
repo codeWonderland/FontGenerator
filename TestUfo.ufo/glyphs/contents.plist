@@ -3,109 +3,109 @@
 "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-   <key>A</key>
-   <string>A_.glif</string>
    <key>a</key>
-   <string>a_.glif</string>
-   <key>B</key>
-   <string>B_.glif</string>
+   <string>a_lower.glif</string>
+   <key>A</key>
+   <string>a_upper.glif</string>
    <key>b</key>
-   <string>b_.glif</string>
-   <key>C</key>
-   <string>C_.glif</string>
+   <string>b_lower.glif</string>
+   <key>B</key>
+   <string>b_upper.glif</string>
    <key>c</key>
-   <string>c_.glif</string>
-   <key>D</key>
-   <string>D_.glif</string>
+   <string>c_lower.glif</string>
+   <key>C</key>
+   <string>c_upper.glif</string>
    <key>d</key>
-   <string>d_.glif</string>
-   <key>E</key>
-   <string>E_.glif</string>
+   <string>d_lower.glif</string>
+   <key>D</key>
+   <string>d_upper.glif</string>
    <key>e</key>
-   <string>e_.glif</string>
-   <key>F</key>
-   <string>F_.glif</string>
+   <string>e_lower.glif</string>
+   <key>E</key>
+   <string>e_upper.glif</string>
    <key>f</key>
-   <string>f_.glif</string>
-   <key>G</key>
-   <string>G_.glif</string>
+   <string>f_lower.glif</string>
+   <key>F</key>
+   <string>f_upper.glif</string>
    <key>g</key>
-   <string>g_.glif</string>
-   <key>H</key>
-   <string>H_.glif</string>
+   <string>g_lower.glif</string>
+   <key>G</key>
+   <string>g_upper.glif</string>
    <key>h</key>
-   <string>h_.glif</string>
-   <key>I</key>
-   <string>I_.glif</string>
+   <string>h_lower.glif</string>
+   <key>H</key>
+   <string>h_upper.glif</string>
    <key>i</key>
-   <string>i_.glif</string>
-   <key>J</key>
-   <string>J_.glif</string>
+   <string>i_lower.glif</string>
+   <key>I</key>
+   <string>i_upper.glif</string>
    <key>j</key>
-   <string>j_.glif</string>
-   <key>K</key>
-   <string>K_.glif</string>
+   <string>j_lower.glif</string>
+   <key>J</key>
+   <string>j_upper.glif</string>
    <key>k</key>
-   <string>k_.glif</string>
-   <key>L</key>
-   <string>L_.glif</string>
+   <string>k_lower.glif</string>
+   <key>K</key>
+   <string>k_upper.glif</string>
    <key>l</key>
-   <string>l_.glif</string>
-   <key>M</key>
-   <string>M_.glif</string>
+   <string>l_lower.glif</string>
+   <key>L</key>
+   <string>l_upper.glif</string>
    <key>m</key>
-   <string>m_.glif</string>
-   <key>N</key>
-   <string>N_.glif</string>
+   <string>m_lower.glif</string>
+   <key>M</key>
+   <string>m_upper.glif</string>
    <key>n</key>
-   <string>n_.glif</string>
-   <key>O</key>
-   <string>O_.glif</string>
+   <string>n_lower.glif</string>
+   <key>N</key>
+   <string>n_upper.glif</string>
    <key>o</key>
-   <string>o_.glif</string>
-   <key>P</key>
-   <string>P_.glif</string>
+   <string>o_lower.glif</string>
+   <key>O</key>
+   <string>o_upper.glif</string>
    <key>p</key>
-   <string>p_.glif</string>
-   <key>Q</key>
-   <string>Q_.glif</string>
+   <string>p_lower.glif</string>
+   <key>P</key>
+   <string>p_upper.glif</string>
    <key>q</key>
-   <string>q_.glif</string>
-   <key>R</key>
-   <string>R_.glif</string>
+   <string>q_lower.glif</string>
+   <key>Q</key>
+   <string>q_upper.glif</string>
    <key>r</key>
-   <string>r_.glif</string>
-   <key>S</key>
-   <string>S_.glif</string>
+   <string>r_lower.glif</string>
+   <key>R</key>
+   <string>r_upper.glif</string>
    <key>s</key>
-   <string>s_.glif</string>
-   <key>T</key>
-   <string>T_.glif</string>
+   <string>s_lower.glif</string>
+   <key>S</key>
+   <string>s_upper.glif</string>
    <key>t</key>
-   <string>t_.glif</string>
-   <key>U</key>
-   <string>U_.glif</string>
+   <string>t_lower.glif</string>
+   <key>T</key>
+   <string>t_upper.glif</string>
    <key>u</key>
-   <string>u_.glif</string>
-   <key>V</key>
-   <string>V_.glif</string>
+   <string>u_lower.glif</string>
+   <key>U</key>
+   <string>u_upper.glif</string>
    <key>v</key>
-   <string>v_.glif</string>
-   <key>W</key>
-   <string>W_.glif</string>
+   <string>v_lower.glif</string>
+   <key>V</key>
+   <string>v_upper.glif</string>
    <key>w</key>
-   <string>w_.glif</string>
-   <key>X</key>
-   <string>X_.glif</string>
+   <string>w_lower.glif</string>
+   <key>W</key>
+   <string>w_upper.glif</string>
    <key>x</key>
-   <string>x_.glif</string>
-   <key>Y</key>
-   <string>Y_.glif</string>
+   <string>x_lower.glif</string>
+   <key>X</key>
+   <string>x_upper.glif</string>
    <key>y</key>
-   <string>y_.glif</string>
-   <key>Z</key>
-   <string>Z_.glif</string>
+   <string>y_lower.glif</string>
+   <key>Y</key>
+   <string>y_upper.glif</string>
    <key>z</key>
-   <string>z_.glif</string>
+   <string>z_lower.glif</string>
+   <key>Z</key>
+   <string>z_upper.glif</string>
 </dict>
 </plist>
