@@ -16,8 +16,8 @@ import java.io.File;
 
 public class Character {
     public enum CASE {
-        LOWERCASE,
-        UPPERCASE
+        lower,
+        upper
     }
 
     public enum SYMBOL {
@@ -97,7 +97,7 @@ public class Character {
         // Create hexcode element
         String charCode;
 
-        if(mCase == CASE.UPPERCASE) {
+        if(mCase == CASE.upper) {
             charCode = mSymbol.toString().toUpperCase();
 
         } else {

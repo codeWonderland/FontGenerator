@@ -146,10 +146,14 @@ public class UFOManager {
         String letter;
 
         for (Character.SYMBOL s : Character.SYMBOL.values()) {
-            letter = s.toString().toUpperCase();
+            letter = s.toString();
 
-            alphabet.add(letter);
-            alphabet.add(letter.toLowerCase());
+            alphabet.add(
+                    String.format("%s_lower", letter)
+            );
+            alphabet.add(
+                    String.format("%s_upper", letter)
+            );
         }
 
 
@@ -158,13 +162,13 @@ public class UFOManager {
                 "<dict>\n"
         );
 
-        for (String charater : alphabet)
+        for (String character : alphabet)
             contents.append("   <key>")
-                    .append(charater)
+                    .append(character)
                     .append("</key>\n")
                     .append("   <string>")
-                    .append(charater)
-                    .append("_.glif</string>\n");
+                    .append(character)
+                    .append(".glif</string>\n");
 
 
         contents.append("</dict>\n" + "</plist>");

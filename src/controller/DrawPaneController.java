@@ -1,7 +1,6 @@
 package controller;
 
 import javafx.collections.FXCollections;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -9,25 +8,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 import model.Character;
 import org.xml.sax.SAXException;
 import util.UFOManager;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 public class DrawPaneController {
@@ -82,7 +73,7 @@ public class DrawPaneController {
                 model.Character.CASE.values()
         ));
 
-        caseChoice.setValue(Character.CASE.LOWERCASE);
+        caseChoice.setValue(Character.CASE.lower);
 
         caseChoice.getSelectionModel()
                 .selectedIndexProperty()
@@ -174,13 +165,13 @@ public class DrawPaneController {
                             break;
 
                         case UP:
-                            setCase(Character.CASE.UPPERCASE);
-                            caseChoice.setValue(Character.CASE.UPPERCASE);
+                            setCase(Character.CASE.upper);
+                            caseChoice.setValue(Character.CASE.upper);
                             break;
 
                         case DOWN:
-                            setCase(Character.CASE.LOWERCASE);
-                            caseChoice.setValue(Character.CASE.LOWERCASE);
+                            setCase(Character.CASE.lower);
+                            caseChoice.setValue(Character.CASE.lower);
                             break;
 
                         default:
@@ -356,16 +347,8 @@ public class DrawPaneController {
      * @param symbol the current character
      */
     private String getFile(Character.CASE charCase, Character.SYMBOL symbol) {
-        String filePath = mainController.getProjectDir() + "/glyphs/";
-
-        if (charCase == Character.CASE.LOWERCASE) {
-            filePath += symbol.name().toLowerCase() + "_.glif";
-
-        } else {
-            filePath += symbol.name().toUpperCase() + "_.glif";
-        }
-
-        return filePath;
+        return mainController.getProjectDir() +
+                String.format("/glyphs/%s_%s.glif", symbol, charCase);
     }
 
     /**
