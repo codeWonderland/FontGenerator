@@ -10,7 +10,7 @@ The rest of the dependencies can be installed via pip
 $ pip install fontmake pyclipper==1.0.6
 ```
 
-Note: For Development you will also want to download the [proper JDK version](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Note: For Development you will also want to download the [recommended JDK version](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 ## Installation
 Download the latest jar file from our [releases page](https://github.com/codeWonderland/FontGenerator/releases).
