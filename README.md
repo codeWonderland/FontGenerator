@@ -22,6 +22,15 @@ Once the dependencies are in place, navigate to the jar file you downloaded earl
 java -jar FontGenerator.jar
 ```
 
+### Keybindings
+Within the app itself, there are a number of keybindings available to make the process of creating fonts easier, including:
+- `ctr-r` to reset the current character
+- `ctr-s` to save the current character
+- left and right arrows to swap the current symbol
+- up and down arrows to change to uppercase and lowercase respectively
+
+The intention of these additions are to have them available for any kind of peripheral pen buttons, to streamline the font creation process
+
 ## Additional Notes
 This program was meant to be used with a tablet and pen interface, but as long as you can click and drag any mouse or mouse-simulating peripheral will do.
 
